@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "angularbook-new"
+  "defaultProject": "angularbook-new",
+  "cli": {
+    "analytics": "e2709b2e-590a-4ac3-885e-cb5aacfd6e4d"
+  }
 }
