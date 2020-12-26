@@ -1,0 +1,92 @@
+.container-login {
+  padding: 50px 0;
+  background: var(--main-color-3);
+}
+
+.content-login {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .header {
+    text-align: left;
+  }
+  .logo-facebook {
+    margin: -28px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .content-login {
+    flex-direction: column;
+    text-align: center;
+    .header {
+      text-align: center;
+    }
+  }
+}
+
+.header h2 {
+  font-weight: normal;
+  margin-bottom: 0;
+  padding-bottom: 40px;
+}
+
+.header-max-width {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.login {
+  align-items: center;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px 20px 28px;
+  max-width: 396px;
+  width: 100%;
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 6px 0;
+  }
+  .enter,
+  .account {
+    margin: 6px 0 0;
+  }
+  .remember {
+    margin-top: 16px;
+    display: inline-block;
+  }
+  hr {
+    margin: 20px 16px;
+    opacity: .5;
+  }
+}
+
+.create-page {
+  font-size: 14px;
+  margin-top: 28px;
+}
+
+.footer {
+  color: var(--main-color-5);
+  font-size: 12px;
+  ul {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    padding-left: 10px;
+  }
+}

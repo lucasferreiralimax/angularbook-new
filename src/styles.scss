@@ -1,6 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+  --main-color-1: #1c1e21;
+  --main-color-2: #fff;
+  --main-color-3: #f0f2f5;
+  --main-color-4: #dddfe2;
+  --main-color-5: #737373;
+  --main-color-primary: #1877f2;
+  --main-color-success: #42b72a;
+}
+
+
 body {
+  color: var(--main-color-1);
   font-family: Arial;
   margin: 0;
   padding: 0;
@@ -8,4 +20,45 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &.default {
+    color: var(--main-color-1);
+    font-weight: bold;
+  }
+  &.primary {
+    color: var(--main-color-primary)
+  }
+}
+
+.btn {
+  border: 0;
+  border-radius: 6px;
+  padding: 0 16px;
+  font-size: 20px;
+  line-height: 48px;
+  color: var(--main-color-2);
+  background: var(--main-color-1);
+  cursor: pointer;
+  &.primary {
+    background: var(--main-color-primary);
+  }
+  &.success {
+    background: var(--main-color-success);
+  }
+  &.full {
+    width: 100%;
+  }
+}
+
+input {
+  border-radius: 6px;
+  font-size: 17px;
+  padding: 14px 16px;
+  border: 1px solid var(--main-color-4);
 }
