@@ -13,6 +13,7 @@
 
 body {
   color: var(--main-color-1);
+  background: var(--main-color-2);
   font-family: Arial;
   margin: 0;
   padding: 0;
@@ -42,7 +43,7 @@ a {
   padding: 0 16px;
   font-size: 20px;
   line-height: 48px;
-  color: var(--main-color-2);
+  color: #fff;
   background: var(--main-color-1);
   cursor: pointer;
   &.primary {
@@ -61,4 +62,6 @@ input {
   font-size: 17px;
   padding: 14px 16px;
   border: 1px solid var(--main-color-4);
+  background-color: var(--main-color-2);
+  color: var(--main-color-1);
 }
