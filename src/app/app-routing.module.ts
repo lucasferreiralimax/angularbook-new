@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./views/login/login.module').then(m => m.LoginModule)
   },
   {
+    path: '',
+    loadChildren: () => import('./views/views.module').then(m => m.ViewsModule),
+  },
+  {
     path: '404',
     loadChildren: () => import('./views/notfound/notfound.module').then(m => m.NotfoundModule),
   },
