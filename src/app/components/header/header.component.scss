@@ -1,3 +1,39 @@
 .header {
-  background: #ccc;
+  background: var(--main-color-2);
+  box-shadow: 0 4px 4px rgba(0,0,0, .2);
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  .right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav-button {
+  border-radius: 100px;
+  border: 0;
+  background: rgba(0,0,0, .1);
+  min-width: 40px;
+  height: 40px;
+  font-size: 0;
+  margin-left: 8px;
+  cursor: pointer;
+  &:hover {
+    background: rgba(0,0,0, .2);
+  }
+  &.squared {
+    border-radius: 8px;
+    background: rgba(0,0,0, 0);
+    &:hover {
+      background: rgba(0,0,0, .1);
+    }
+  }
 }
