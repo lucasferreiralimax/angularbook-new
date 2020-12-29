@@ -65,3 +65,28 @@ input {
   background-color: var(--main-color-2);
   color: var(--main-color-1);
 }
+
+.icon {
+  background-size: auto;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+
+.arrow {
+  background-image: url("assets/sprite_1.png");
+  background-position: 0 -201px;
+}
+
+.plus {
+  background-image: url("assets/sprite_2.png");
+  background-position: 0 -591px;
+}
+
+.search {
+  background-image: url("assets/sprite_2.png");
+  width: 16px;
+  height: 16px;
+  background-position: 0 -819px;
+}
