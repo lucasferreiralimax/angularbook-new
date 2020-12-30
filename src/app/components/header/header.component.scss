@@ -36,8 +36,33 @@
   &.squared {
     border-radius: 8px;
     background: rgba(0,0,0, 0);
+    position: relative;
     &:hover {
       background: rgba(0,0,0, .1);
+    }
+    &.active {
+      svg {
+        fill: var(--main-color-primary);
+      }
+      &:before {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+    &:before {
+      border-radius: 100px;
+      content: '';
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: var(--main-color-primary);
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+      opacity: 0;
+      transition: .3s all;
     }
   }
 }

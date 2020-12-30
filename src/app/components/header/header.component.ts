@@ -13,9 +13,10 @@ import { Observable } from 'rxjs';
 export class HeaderComponent implements OnInit {
 
   menuBookmarks:Observable<boolean>;
+  menuBookmarksActive: boolean = false;
 
   constructor(
-    private router: Router,
+    public router: Router,
     private location: Location,
     public breakpointObserver: BreakpointObserver
   ) {
@@ -28,8 +29,10 @@ export class HeaderComponent implements OnInit {
 
   bookmarks () {
     if(this.router.url == "/bookmarks") {
+      this.menuBookmarksActive = false;
       this.location.back();
     } else {
+      this.menuBookmarksActive = true;
       this.router.navigate(['/bookmarks']);
     }
   }
