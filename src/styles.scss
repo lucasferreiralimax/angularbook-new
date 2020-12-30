@@ -79,6 +79,11 @@ input {
   background-position: 0 -201px;
 }
 
+.arrow-small {
+  background-image: url("assets/sprite_2.png");
+  background-position: 0 -276px;
+}
+
 .plus {
   background-image: url("assets/sprite_2.png");
   background-position: 0 -591px;
@@ -89,4 +94,39 @@ input {
   width: 16px;
   height: 16px;
   background-position: 0 -819px;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 1em .5em;
+  .item {
+    display: flex;
+    align-items: center;
+    padding: .5em;
+    border-radius: 6px;
+    transition: .3s background;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    &:hover {
+      background: rgba(0,0,0,.05);
+    }
+  }
+}
+
+.icon-content {
+  border-radius: 100px;
+  margin-right: .8em;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.plus {
+    background: rgba(0,0,0,.05);
+  }
+  &.photo img {
+    border-radius: 100px;
+  }
 }
