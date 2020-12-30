@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ViewsComponent } from './views.component';
-import { FeedComponent } from '../components/feed/feed.component';
-import { BookmarksComponent } from '../components/bookmarks/bookmarks.component';
 
 const routes: Routes = [
   {
@@ -12,11 +10,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: FeedComponent
+        loadChildren: () => import('./feed/feed.module').then(m => m.FeedModule)
       },
       {
         path: 'bookmarks',
-        component: BookmarksComponent
+        loadChildren: () => import('./bookmarks/bookmarks.module').then(m => m.BookmarksModule)
       }
     ]
   }
