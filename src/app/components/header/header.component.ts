@@ -27,14 +27,4 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  bookmarks () {
-    if(this.router.url == "/bookmarks") {
-      this.menuBookmarksActive = false;
-      this.location.back();
-    } else {
-      this.menuBookmarksActive = true;
-      this.router.navigate(['/bookmarks']);
-    }
-  }
-
 }
