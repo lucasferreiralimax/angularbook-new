@@ -32,7 +32,7 @@
     transition: 0.3s;
   }
   &.active {
-    background: var(--main-color-primary);
+    background: rgb(var(--main-color-primary));
     &:after {
       left: calc(100% - 5px);
       transform: translateX(-100%);

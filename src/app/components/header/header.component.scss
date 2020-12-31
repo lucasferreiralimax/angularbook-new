@@ -33,6 +33,9 @@
   &:hover {
     background: rgba(0,0,0, .2);
   }
+  &.active {
+    background: rgba(var(--main-color-primary), .2);
+  }
   &.squared {
     border-radius: 8px;
     background: rgba(0,0,0, 0);
@@ -42,7 +45,7 @@
     }
     &.active {
       svg {
-        fill: var(--main-color-primary);
+        fill: rgb(var(--main-color-primary));
       }
       &:before {
         opacity: 1;
@@ -55,7 +58,7 @@
       display: block;
       height: 3px;
       width: 100%;
-      background: var(--main-color-primary);
+      background: rgb(var(--main-color-primary));
       position: absolute;
       bottom: -8px;
       left: 0;
