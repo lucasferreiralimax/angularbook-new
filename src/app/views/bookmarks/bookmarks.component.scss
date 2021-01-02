@@ -1,8 +1,8 @@
 .bookmarks {
   padding-top: 5px;
-}
-.footer {
-  padding: 0 1em;
-  font-size: 13px;
-  color: var(--main-color-5);
+  min-height: calc(100vh - 106px);
+  hr {
+    opacity: .5;
+    margin: 0 .5em;
+  }
 }
