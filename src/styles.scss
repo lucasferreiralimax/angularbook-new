@@ -105,6 +105,34 @@ input {
   background-position: 0 -819px;
 }
 
+.feedback,
+.help,
+.logout {
+  background-image: url("assets/sprite_3.png");
+}
+
+.feedback {
+  background-position: 0 -155px;
+}
+
+.help {
+  background-position: 0 -344px;
+}
+
+.logout {
+  background-position: 0 -218px;
+}
+
+.settings {
+  background-image: url("assets/sprite_4.png");
+  background-position: 0 -930px;
+}
+
+.preferences {
+  background-image: url("assets/sprite_5.png");
+  background-position: 0 -461px;
+}
+
 .list {
   list-style: none;
   margin: 0;
@@ -132,6 +160,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: .3s all;
   &.plus {
     background: rgba(0,0,0,.05);
   }

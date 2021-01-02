@@ -28,5 +28,8 @@
       margin-right: 10px;
       border-radius: 100px;
     }
+    .item:hover .plus {
+      background: rgba(0,0,0,.15);
+    }
   }
 }
