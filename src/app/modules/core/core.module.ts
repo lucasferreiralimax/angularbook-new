@@ -4,11 +4,22 @@ import { RouterModule } from '@angular/router'
 
 import { HeaderComponent } from '../../components/header/header.component';
 import { AccountsComponent } from '../../components/accounts/accounts.component';
+import { CreateComponent } from '../../components/create/create.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 
 @NgModule({
-  declarations: [HeaderComponent, AccountsComponent, FooterComponent],
-  exports: [HeaderComponent, AccountsComponent, FooterComponent],
+  declarations: [
+    HeaderComponent,
+    AccountsComponent,
+    CreateComponent,
+    FooterComponent
+  ],
+  exports: [
+    HeaderComponent,
+    AccountsComponent,
+    CreateComponent,
+    FooterComponent
+  ],
   imports: [
     CommonModule,
     RouterModule

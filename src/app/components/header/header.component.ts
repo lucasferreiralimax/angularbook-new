@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   menuBookmarks:Observable<boolean>;
   menuBookmarksActive: boolean = false;
   accounts: boolean = false;
+  create: boolean = false;
 
   constructor(
     public router: Router,

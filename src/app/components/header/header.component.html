@@ -18,9 +18,9 @@
       </svg>
     </button>
     <div class="right">
-      <button class="nav-button" type="button">
+      <button class="nav-button" type="button" (click)="create = !create" [class.active]="create">
         Create
-        <i class="icon plus"></i>
+        <i class="icon plus" [class.active]="create"></i>
       </button>
       <button class="nav-button" type="button">
         Messenger
@@ -41,4 +41,5 @@
     </div>
   </nav>
   <app-accounts [show]="accounts" #accountsRef></app-accounts>
+  <app-create [show]="create" #createRef></app-create>
 </header>
