@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 export class HeaderComponent implements OnInit {
 
   menuBookmarks:Observable<boolean>;
-  menuBookmarksActive: boolean = false;
+  desktopSize:Observable<boolean>;
   accounts: boolean = false;
   create: boolean = false;
 
@@ -21,6 +21,8 @@ export class HeaderComponent implements OnInit {
     public breakpointObserver: BreakpointObserver
   ) {
     this.menuBookmarks = breakpointObserver.observe('(min-width: 1100px)')
+      .pipe(map(result => !result.matches));
+    this.desktopSize = breakpointObserver.observe('(max-width: 1100px)')
       .pipe(map(result => !result.matches));
   }
 

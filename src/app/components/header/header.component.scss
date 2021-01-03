@@ -36,6 +36,18 @@
   &.active {
     background: rgba(var(--main-color-primary), .2);
   }
+  &.profile {
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    img {
+      width: 30px;
+      border-radius: 100px;
+      margin-right: 5px;
+    }
+  }
   &.squared {
     border-radius: 8px;
     background: rgba(0,0,0, 0);

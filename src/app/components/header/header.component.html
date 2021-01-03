@@ -18,6 +18,10 @@
       </svg>
     </button>
     <div class="right">
+      <button class="nav-button profile" type="button" *ngIf="desktopSize | async">
+        <img src="./assets/2L-icon.jpg" alt="Lucas Ferreira Lima">
+        Lucas
+      </button>
       <button class="nav-button" type="button" (click)="create = !create" [class.active]="create">
         Create
         <i class="icon plus" [class.active]="create"></i>
