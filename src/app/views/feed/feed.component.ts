@@ -11,9 +11,12 @@ import { Observable } from 'rxjs';
 export class FeedComponent implements OnInit {
 
   asideBookmarks:Observable<boolean>;
+  asideComplentary:Observable<boolean>;
 
   constructor(public breakpointObserver: BreakpointObserver) {
     this.asideBookmarks = breakpointObserver.observe('(max-width: 1100px)')
+      .pipe(map(result => !result.matches));
+    this.asideComplentary = breakpointObserver.observe('(max-width: 900px)')
       .pipe(map(result => !result.matches));
   }
 
