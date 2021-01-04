@@ -75,6 +75,8 @@ input {
   width: 20px;
 }
 
+.dark-mode .icon { filter: invert(1) }
+
 .arrow {
   background-image: url("assets/sprite_1.png");
   background-position: 0 -201px;

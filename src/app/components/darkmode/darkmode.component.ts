@@ -25,6 +25,7 @@ export class DarkmodeComponent implements OnInit {
       this.root.style.setProperty("--main-color-3", "#333")
       this.root.style.setProperty("--main-color-4", "#999")
       this.root.style.setProperty("--main-color-5", "#eee")
+      this.root.querySelector('body').classList.add('dark-mode')
       this.dark = true
       // localStorage.setItem("dark", true)
     } else {
@@ -33,6 +34,7 @@ export class DarkmodeComponent implements OnInit {
       this.root.style.setProperty("--main-color-3", "#f0f2f5")
       this.root.style.setProperty("--main-color-4", "#dddfe2")
       this.root.style.setProperty("--main-color-5", "#737373")
+      this.root.querySelector('body').classList.remove('dark-mode')
       this.dark = false
       // localStorage.setItem("dark", false)
     }
