@@ -75,14 +75,12 @@ input {
   width: 20px;
 }
 
+i.icon.active { filter: var(--filter-accent); }
 .dark-mode .icon { filter: invert(1) }
 
 .arrow {
   background-image: url("assets/sprite_1.png");
   background-position: 0 -201px;
-  &.active {
-    filter: var(--filter-accent);
-  }
 }
 
 .arrow-small, .search, .plus, .publish {
