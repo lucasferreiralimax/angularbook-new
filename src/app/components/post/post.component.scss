@@ -1,0 +1,42 @@
+.post {
+  background: var(--main-bg-color);
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: max(0px, min(8px, ((100vw - 4px) - 100%) * 9999)) / 8px;
+  padding: 10px 15px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  width: calc(100% - 20px);
+  box-sizing: border-box;
+  margin: 0 10px;
+  .header {
+    display: flex;
+  }
+  hr { opacity: .5; }
+}
+
+.profile-photo {
+  border-radius: 100px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.post-button {
+  border: 0;
+  background: rgba(0,0,0,.1);
+  border-radius: 100px;
+  padding: 11px;
+  font-size: 1.0625rem;
+  color: var(--main-color);
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.post-actions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  li, .item {
+    width: 100%;
+  }
+}

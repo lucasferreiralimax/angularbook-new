@@ -1,4 +1,14 @@
+.feed {
+  display: flex;
+}
+
 .aside {
   max-width: 360px;
   display: block;
+}
+
+.main {
+  padding-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }

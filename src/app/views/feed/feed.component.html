@@ -1,2 +1,7 @@
-<app-bookmarks class="aside" *ngIf="asideBookmarks | async"></app-bookmarks>
-<p>feed works!</p>
+<section class="feed">
+  <app-bookmarks class="aside" *ngIf="asideBookmarks | async"></app-bookmarks>
+  <main class="main">
+    <app-post></app-post>
+    <p>feed works!</p>
+  </main>
+</section>
