@@ -1,6 +1,6 @@
 <section class="accounts" [class.active]="show">
   <ul class="list">
-    <li class="item">
+    <li class="item" [routerLink]="['/lucasferreiralimax']">
       <img class="photo" src="./assets/2L-icon-60.jpg" alt="Lucas Ferreira Lima">
       <div>
         <strong>Lucas Ferreira Lima</strong>
@@ -8,7 +8,7 @@
       </div>
     </li>
     <hr>
-    <li class="item">
+    <li class="item" [routerLink]="['/feedback']">
       <div class="icon-content plus">
         <i class="icon feedback"></i>
       </div>
@@ -18,18 +18,18 @@
       </div>
     </li>
     <hr>
-    <li class="item">
+    <li class="item" [routerLink]="['/settings']">
       <div class="icon-content plus">
         <i class="icon settings"></i>
       </div>
       Configurações e privacidade</li>
-    <li class="item">
+    <li class="item" [routerLink]="['/help']">
       <div class="icon-content plus">
         <i class="icon help"></i>
       </div>
       Ajuda e suporte
     </li>
-    <li class="item">
+    <li class="item" [routerLink]="['/preferences']">
       <div class="icon-content plus">
         <i class="icon preferences"></i>
       </div>
