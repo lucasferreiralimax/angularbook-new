@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
@@ -24,6 +24,16 @@ export class HeaderComponent implements OnInit {
       .pipe(map(result => !result.matches));
     this.desktopSize = breakpointObserver.observe('(max-width: 1100px)')
       .pipe(map(result => !result.matches));
+  }
+
+  @ViewChild('accountsRef', {read: ElementRef}) accountsRef: any;
+  @ViewChild('createRef', {read: ElementRef}) createRef: any;
+
+  @HostListener('document:click', ['$event'])
+  @HostListener('document:touchstart', ['$event'])
+  handleOutsideClick(event: any) {
+    if (!event.path.includes(this.accountsRef.nativeElement)) this.accounts = false
+    if (!event.path.includes(this.createRef.nativeElement)) this.create = false
   }
 
   ngOnInit(): void {
