@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   desktopSize:Observable<boolean>;
   accounts: boolean = false;
   create: boolean = false;
+  notifications: boolean = false;
 
   constructor(
     public router: Router,
@@ -28,12 +29,14 @@ export class HeaderComponent implements OnInit {
 
   @ViewChild('accountsRef', {read: ElementRef}) accountsRef: any;
   @ViewChild('createRef', {read: ElementRef}) createRef: any;
+  @ViewChild('notificationsRef', {read: ElementRef}) notificationsRef: any;
 
   @HostListener('document:click', ['$event'])
   @HostListener('document:touchstart', ['$event'])
   handleOutsideClick(event: any) {
     if (!event.path.includes(this.accountsRef.nativeElement)) this.accounts = false
     if (!event.path.includes(this.createRef.nativeElement)) this.create = false
+    if (!event.path.includes(this.notificationsRef.nativeElement)) this.notifications = false
   }
 
   ngOnInit(): void {

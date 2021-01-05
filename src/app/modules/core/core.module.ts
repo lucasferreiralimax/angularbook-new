@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router'
 import { HeaderComponent } from '../../components/header/header.component';
 import { AccountsComponent } from '../../components/accounts/accounts.component';
 import { CreateComponent } from '../../components/create/create.component';
+import { NotificationsComponent } from '../../components/notifications/notifications.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 
 @NgModule({
@@ -12,12 +13,14 @@ import { FooterComponent } from '../../components/footer/footer.component';
     HeaderComponent,
     AccountsComponent,
     CreateComponent,
+    NotificationsComponent,
     FooterComponent
   ],
   exports: [
     HeaderComponent,
     AccountsComponent,
     CreateComponent,
+    NotificationsComponent,
     FooterComponent
   ],
   imports: [
