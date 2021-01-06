@@ -10,10 +10,10 @@
       </div>
     </header>
     <main class="main text-center">
-      <form class="login">
-        <input type="text" placeholder="Email ou telefone">
-        <input type="password" placeholder="Senha">
-        <button class="btn primary full enter" type="button">Entrar</button>
+      <form class="login" [formGroup]="loginForm" (ngSubmit)="onSubmitLogin(loginForm.value)">
+        <input type="text" placeholder="Email ou telefone" formControlName="email">
+        <input type="password" placeholder="Senha" formControlName="password">
+        <button class="btn primary full enter" type="button" [disabled]="!loginForm.valid" type="submit">Entrar</button>
         <a href="#" class="remember primary">Esqueceu a senha?</a>
         <hr>
         <button class="btn success account" type="button">Criar nova conta</button>
