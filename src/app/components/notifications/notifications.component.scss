@@ -15,8 +15,8 @@
     opacity: 1;
     pointer-events: all;
   }
-  h1 {
-    margin: 0;
+  h1, h2, h3 {
+    margin: 10px;
   }
   hr {
     opacity: .3;
@@ -24,7 +24,9 @@
   .list {
     padding: 5px;
     p {
+      font-size: 15px;
       font-weight: normal;
+      margin: 0;
     }
     .photo {
       margin-right: 10px;
@@ -33,6 +35,10 @@
       min-width: 56px;
       height: 56px;
       display: flex;
+    }
+    .date {
+      font-size: 13px;
+      margin-top: 5px;
     }
     .item:hover .plus {
       background: rgba(0,0,0,.15);
