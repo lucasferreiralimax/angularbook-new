@@ -118,6 +118,15 @@ i.icon.active { filter: var(--filter-accent); }
 .preferences { background-position: 0 -461px; }
 .page { background-position: 0 -125px; }
 
+.live, .midia, .happy {
+  background-image: url("assets/sprite_6.png");
+  height: 24px;
+  width: 24px;
+}
+.live { background-position: 0 -25px; }
+.midia { background-position: 0 -325px; }
+.happy { background-position: 0 -100px; }
+
 .list {
   list-style: none;
   margin: 0;

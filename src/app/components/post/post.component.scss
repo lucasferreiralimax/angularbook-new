@@ -40,4 +40,19 @@
   li, .item {
     width: 100%;
   }
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 6px;
+    &:hover {
+      background: rgba(0,0,0,.1);
+    }
+    .icon {
+      margin-right: 10px;
+    }
+  }
 }
