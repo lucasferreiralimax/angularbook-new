@@ -47,6 +47,10 @@ a {
   color: #fff;
   background: var(--main-color-1);
   cursor: pointer;
+  &[disabled] {
+    opacity: .6;
+    cursor: not-allowed;
+  }
   &.primary {
     background: rgb(var(--main-color-primary));
   }
