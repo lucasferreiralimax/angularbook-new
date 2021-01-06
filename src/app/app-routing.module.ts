@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AuthGuard } from '@auth/auth.guard'
+
 const routes: Routes = [
   {
     path: 'login',
@@ -9,6 +11,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./views/views.module').then(m => m.ViewsModule),
+    canLoad: [AuthGuard],
+    canActivate: [AuthGuard]
   },
   {
     path: '404',
