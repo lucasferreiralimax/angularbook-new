@@ -2,7 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
     "paths": {
       "@services/*": ["app/services/*"],
       "@components/*": ["app/components/*"],

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { DarkmodeComponent } from '../../components/darkmode/darkmode.component';
-import { PostComponent } from '../../components/post/post.component';
-import { FeedListComponent } from '../../components/feed-list/feed-list.component';
-import { ComplementaryComponent } from '../../components/complementary/complementary.component';
+import { DarkmodeComponent } from '@components/darkmode/darkmode.component';
+import { PostComponent } from '@components/post/post.component';
+import { FeedListComponent } from '@components/feed-list/feed-list.component';
+import { ComplementaryComponent } from '@components/complementary/complementary.component';
 
 @NgModule({
   declarations: [
