@@ -48,6 +48,8 @@
     padding: 6px;
     cursor: pointer;
     border-radius: 6px;
+    background: transparent;
+    color: var(--main-color);
     &:hover {
       background: rgba(0,0,0,.1);
     }
