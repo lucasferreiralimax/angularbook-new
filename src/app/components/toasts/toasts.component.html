@@ -1,0 +1,6 @@
+<section class="toasts">
+  <article *ngFor="let item of toasts; index as id" class="toast" [ngClass]="item.type" (click)="close(id)">
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.content }}</p>
+  </article>
+</section>
