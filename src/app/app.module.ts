@@ -6,10 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { JwtInterceptor } from './auth/jwt.interceptor';
+import { ToastsComponent } from './components/toasts/toasts.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToastsComponent
   ],
   imports: [
     BrowserModule,
