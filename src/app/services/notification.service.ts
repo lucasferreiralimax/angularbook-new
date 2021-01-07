@@ -9,7 +9,7 @@ export class NotificationService {
 
   notifications: any = [];
 
-  notification(type: any, title: any, content: any) {
+  notification(type: string, title: string, content: string) {
     this.notifications.push({
       type: type,
       title: title,
