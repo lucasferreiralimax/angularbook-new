@@ -7,7 +7,7 @@ export class CookiesService {
 
   constructor() { }
 
-  setCookie(cname: any, cvalue: any, extime: any) {
+  setCookie(cname: string, cvalue: string, extime: number) {
     let now = new Date();
     let time = now.getTime();
         time += extime; // 3600 * 1000
@@ -16,7 +16,7 @@ export class CookiesService {
     document.cookie = cname + "=" + cvalue +  ';' + expires + '; path=/';
   }
 
-  getCookie(cname: any) {
+  getCookie(cname: string) {
     let name = cname + "=";
     let ca = document.cookie.split(';');
 
@@ -32,12 +32,11 @@ export class CookiesService {
     return "";
   }
 
-  checkCookie(name: any) {
-    let c = this.getCookie(name);
-    return c ? true : false
+  checkCookie(name: string) {
+    return this.getCookie(name) ? true : false
   }
 
-  deleteCookie(name: any) {
+  deleteCookie(name: string) {
     document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
   }
 }
