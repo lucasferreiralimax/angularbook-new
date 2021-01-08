@@ -2,5 +2,8 @@
   <article *ngFor="let item of toasts; index as id" class="toast" [ngClass]="item.type" (click)="close(id)">
     <h2>{{ item.title }}</h2>
     <p>{{ item.content }}</p>
+    <button type="button" aria-label="Fechar mensagem toasts">
+      <i class="icon close"></i>
+    </button>
   </article>
 </section>

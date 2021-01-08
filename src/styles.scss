@@ -88,7 +88,7 @@ i.icon.active { filter: var(--filter-accent); }
   background-position: 0 -201px;
 }
 
-.arrow-small, .search, .plus, .publish {
+.arrow-small, .search, .plus, .publish, .close {
   background-image: url("assets/sprite_2.png");
 }
 .arrow-small { background-position: 0 -276px; }
@@ -96,7 +96,13 @@ i.icon.active { filter: var(--filter-accent); }
 .publish { background-position: 0 -444px; }
 .search {
   width: 16px;
-  height: 16px; background-position: 0 -819px;
+  height: 16px;
+  background-position: 0 -819px;
+}
+.close {
+  width: 12px;
+  height: 12px;
+  background-position: 0 -934px;
 }
 
 .feedback, .help, .logout, .story, .advertising, .marketplace {
