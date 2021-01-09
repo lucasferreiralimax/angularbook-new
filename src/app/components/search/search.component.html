@@ -1,0 +1,15 @@
+<section class="search-container" [class.active]="searchStatus">
+  <div>
+    <button class="search-back" type="button" (click)="openSearch(false)" *ngIf="searchStatus">
+      <i class="icon back"></i>
+    </button>
+    <button class="search-input" type="button" (click)="openSearch(true)">
+      <i class="icon search" *ngIf="!searchStatus"></i>
+      <input type="text" placeholder="Pesquisar no Angularbook" (focus)="openSearch(true)" [class.active]="searchStatus">
+    </button>
+  </div>
+  <div class="search-content" *ngIf="searchStatus">
+    <p>Nenhuma pesquisa recente</p>
+  </div>
+</section>
+

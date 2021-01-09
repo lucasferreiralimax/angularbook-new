@@ -88,12 +88,13 @@ i.icon.active { filter: var(--filter-accent); }
   background-position: 0 -201px;
 }
 
-.arrow-small, .search, .plus, .publish, .close {
+.arrow-small, .search, .plus, .publish, .close, .back {
   background-image: url("assets/sprite_2.png");
 }
 .arrow-small { background-position: 0 -276px; }
 .plus { background-position: 0 -591px; }
 .publish { background-position: 0 -444px; }
+.back { background-position: 0 -150px; }
 .search {
   width: 16px;
   height: 16px;
