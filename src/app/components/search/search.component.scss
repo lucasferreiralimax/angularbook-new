@@ -2,14 +2,18 @@
   display: flex;
   flex-direction: column;
   transition: 0s all;
+  position: fixed;
+  min-width: 352px;
+  top: 0;
+  left: 0;
+  padding: 6px 16px 0;
+  height: 60px;
+  box-sizing: border-box;
   &.active {
-    padding: 6px 16px 0;
-    background: #fff;
+    background: var(--main-color-2);
     border-radius: 0 0 6px 6px;
     box-shadow: 0 12px 12px rgba(#000, .15), inset 0 0 0 0 rgba(#fff, .7);
-    position: absolute;
     top: 0;
-    left: 0;
     min-height: 90px;
     z-index: 99;
     transition: .3s height, .3s padding, .3s box-shadow;
@@ -45,9 +49,32 @@
     background: rgba(var(--main-color-primary), .2);
   }
 }
+
+.search-back {
+  width: 0;
+  min-width: 0;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  &.show {
+    width: 40px;
+    opacity: 1;
+    pointer-events: all;
+    position: relative;
+    left: -140px;
+    transition: .3s all;
+  }
+}
+
 .search-input {
   background: rgba(0,0,0, .1);
   margin-left: 8px;
+  position: absolute;
+  right: 16px;
+  @media screen and (max-width: 1100px) {
+    right: auto;
+    left: 55px;
+  }
   .icon {
     position: absolute;
     top: 12px;
@@ -67,7 +94,7 @@
     }
     &.active {
       padding: 11px 15px;
-      min-width: calc(220px + 35px);
+      min-width: calc(220px + 20px);
     }
     &.active,
     &:focus {

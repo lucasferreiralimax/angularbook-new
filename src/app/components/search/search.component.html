@@ -1,6 +1,6 @@
 <section class="search-container" [class.active]="searchStatus">
   <div>
-    <button class="search-back" type="button" (click)="openSearch(false)" *ngIf="searchStatus">
+    <button class="search-back" type="button" (click)="openSearch(false)" [class.show]="searchStatus">
       <i class="icon back"></i>
     </button>
     <button class="search-input" type="button" (click)="openSearch(true)">

@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -19,6 +19,12 @@ export class SearchComponent implements OnInit {
     if(this.searchStatus) {
       this._elementRef.nativeElement.querySelector('input').focus()
     }
+  }
+
+  @HostListener('document:click', ['$event'])
+  @HostListener('document:touchstart', ['$event'])
+  handleOutsideClick(event: any) {
+    if (!event.path.includes(this._elementRef.nativeElement)) this.openSearch(false)
   }
 
 }
