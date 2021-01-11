@@ -27,16 +27,30 @@ export class HeaderComponent implements OnInit {
       .pipe(map(result => !result.matches));
   }
 
+
   @ViewChild('accountsRef', {read: ElementRef}) accountsRef: any;
   @ViewChild('createRef', {read: ElementRef}) createRef: any;
   @ViewChild('notificationsRef', {read: ElementRef}) notificationsRef: any;
 
+  @ViewChild('accountsButtonRef', {read: ElementRef}) accountsButtonRef: any;
+  @ViewChild('createButtonRef', {read: ElementRef}) createButtonRef: any;
+  @ViewChild('notificationsButtonRef', {read: ElementRef}) notificationsButtonRef: any;
+
   @HostListener('document:click', ['$event'])
   @HostListener('document:touchstart', ['$event'])
   handleOutsideClick(event: any) {
-    if (!event.path.includes(this.accountsRef.nativeElement)) this.accounts = false
-    if (!event.path.includes(this.createRef.nativeElement)) this.create = false
-    if (!event.path.includes(this.notificationsRef.nativeElement)) this.notifications = false
+    if (
+        !event.path.includes(this.accountsRef.nativeElement) &&
+        !event.path.includes(this.accountsButtonRef.nativeElement)
+      ) { this.accounts = false }
+    if (
+        !event.path.includes(this.createRef.nativeElement) &&
+        !event.path.includes(this.createButtonRef.nativeElement)
+      ) { this.create = false }
+    if (
+        !event.path.includes(this.notificationsRef.nativeElement) &&
+        !event.path.includes(this.notificationsButtonRef.nativeElement)
+      ) { this.notifications = false }
   }
 
   ngOnInit(): void {
