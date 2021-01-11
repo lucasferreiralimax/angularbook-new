@@ -1,22 +1,22 @@
 .search-container {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  transition: 0s all;
-  position: fixed;
-  min-width: 352px;
-  top: 0;
-  left: 0;
-  padding: 6px 16px 0;
   height: 60px;
-  box-sizing: border-box;
+  left: 0;
+  min-width: 352px;
+  padding: 6px 16px 0;
+  position: fixed;
+  top: 0;
+  transition: 0s all;
   &.active {
     background: var(--main-color-2);
     border-radius: 0 0 6px 6px;
     box-shadow: 0 12px 12px rgba(#000, .15), inset 0 0 0 0 rgba(#fff, .7);
-    top: 0;
     min-height: 90px;
-    z-index: 99;
+    top: 0;
     transition: .3s height, .3s padding, .3s box-shadow;
+    z-index: 99;
   }
   & > div {
     display: flex;
@@ -25,10 +25,10 @@
 }
 
 .search-content {
-  width: 100%;
   display: flex;
-  justify-content: center;
   font-size: .9375rem;
+  justify-content: center;
+  width: 100%;
 }
 
 .search-back,
@@ -36,33 +36,29 @@
   background: transparent;
   border-radius: 100px;
   border: 0;
-  min-width: 40px;
-  height: 40px;
-  font-size: 0;
-  padding: 0;
   cursor: pointer;
+  font-size: 0;
+  height: 40px;
+  min-width: 40px;
+  padding: 0;
   position: relative;
-  &:hover {
-    background: rgba(0,0,0, .2);
-  }
-  &.active {
-    background: rgba(var(--main-color-primary), .2);
-  }
+  &:hover { background: rgba(0,0,0, .2); }
+  &.active { background: rgba(var(--main-color-primary), .2); }
 }
 
 .search-back {
-  width: 0;
   min-width: 0;
   opacity: 0;
-  position: absolute;
   pointer-events: none;
+  position: absolute;
+  width: 0;
   &.show {
-    width: 40px;
+    left: -140px;
     opacity: 1;
     pointer-events: all;
     position: relative;
-    left: -140px;
     transition: .3s all;
+    width: 40px;
   }
 }
 
@@ -72,29 +68,29 @@
   position: absolute;
   right: 16px;
   @media screen and (max-width: 1100px) {
-    right: auto;
     left: 55px;
+    right: auto;
   }
   .icon {
+    left: 12px;
     position: absolute;
     top: 12px;
-    left: 12px;
   }
   input {
-    font-size: .9375rem;
-    padding: 11px 15px 11px 35px;
-    border-radius: 100px;
     background: transparent;
+    border-radius: 100px;
+    font-size: .9375rem;
     min-width: 220px;
+    padding: 11px 15px 11px 35px;
     @media screen and (max-width: 1100px) {
-      min-width: auto;
       font-size: 0;
-      padding: 0;
+      min-width: auto;
       opacity: 0;
+      padding: 0;
     }
     &.active {
-      padding: 11px 15px;
       min-width: calc(220px + 20px);
+      padding: 11px 15px;
     }
     &.active,
     &:focus {

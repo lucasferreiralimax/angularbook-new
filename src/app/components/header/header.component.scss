@@ -1,65 +1,59 @@
 .header {
+  align-items: center;
   background: var(--main-color-2);
   box-shadow: 0 4px 4px rgba(0,0,0, .2);
-  padding: 6px 16px;
   display: flex;
-  align-items: center;
-  position: fixed;
-  top: 0;
   left: 0;
+  padding: 6px 16px;
+  position: fixed;
   right: 0;
+  top: 0;
   z-index: 99;
 }
 
 .nav {
-  width: 100%;
-  display: flex;
   align-items: center;
+  display: flex;
+  width: 100%;
   .right {
-    margin-left: auto;
-    display: flex;
     align-items: center;
+    display: flex;
+    margin-left: auto;
   }
 }
 
 .nav-button {
+  background: rgba(0,0,0, .1);
   border-radius: 100px;
   border: 0;
-  background: rgba(0,0,0, .1);
-  min-width: 40px;
-  height: 40px;
-  font-size: 0;
-  margin-left: 8px;
   cursor: pointer;
-  &:hover {
-    background: rgba(0,0,0, .2);
-  }
+  font-size: 0;
+  height: 40px;
+  margin-left: 8px;
+  min-width: 40px;
+  &:hover {  background: rgba(0,0,0, .2); }
   &.active {
     background: rgba(var(--main-color-primary), .2);
-    svg {
-      fill: rgb(var(--main-color-primary));
-    }
+    svg { fill: rgb(var(--main-color-primary)); }
   }
   &.profile {
+    align-items: center;
+    color: var(--main-color);
+    display: flex;
     font-size: 15px;
     font-weight: bold;
-    display: flex;
-    align-items: center;
     padding-right: 10px;
-    color: var(--main-color);
     img {
-      width: 30px;
       border-radius: 100px;
       margin-right: 5px;
+      width: 30px;
     }
   }
   &.squared {
-    border-radius: 8px;
     background: rgba(0,0,0, 0);
+    border-radius: 8px;
     position: relative;
-    &:hover {
-      background: rgba(0,0,0, .1);
-    }
+    &:hover { background: rgba(0,0,0, .1); }
     &.active {
       &:before {
         opacity: 1;
@@ -67,19 +61,19 @@
       }
     }
     &:before {
+      background: rgb(var(--main-color-primary));
       border-radius: 100px;
+      bottom: -8px;
       content: '';
       display: block;
       height: 3px;
-      width: 100%;
-      background: rgb(var(--main-color-primary));
-      position: absolute;
-      bottom: -8px;
       left: 0;
-      right: 0;
-      pointer-events: none;
       opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
       transition: .3s all;
+      width: 100%;
     }
   }
 }

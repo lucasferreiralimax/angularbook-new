@@ -1,32 +1,22 @@
 .loading {
-  transform-origin: 50% 50%;
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0,0,1,1);
   animation: 2s loading-element infinite;
+  transform-origin: 50% 50%;
   .circle {
-    animation-timing-function: cubic-bezier(.33,0,.67,1);
     animation-fill-mode: both;
-    transform-origin: 50% 50%;
+    animation-timing-function: cubic-bezier(.33,0,.67,1);
     animation: 2s loading-element-circle infinite;
+    transform-origin: 50% 50%;
   }
 }
 
 @keyframes loading-element {
-  0% {
-    transform: rotate(-90deg);
-  }
-  25% {
-    transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(270deg);
-  }
-  50% {
-    transform: rotate(450deg);
-  }
-  100% {
-    transform: rotate(990deg);
-  }
+  0%   { transform: rotate(-90deg); }
+  25%  { transform: rotate(90deg);  }
+  50%  { transform: rotate(270deg); }
+  50%  { transform: rotate(450deg); }
+  100% { transform: rotate(990deg); }
 }
 
 @keyframes loading-element-circle {

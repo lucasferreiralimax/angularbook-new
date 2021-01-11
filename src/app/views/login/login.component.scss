@@ -1,34 +1,26 @@
 .container-login {
-  padding: 72px 0 112px;
   background: var(--main-color-3);
+  padding: 72px 0 112px;
 }
 
 .content-login {
-  max-width: 980px;
-  margin: 0 auto;
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  margin: 0 auto;
+  max-width: 980px;
   padding: 0 1em;
-  .header {
-    text-align: left;
-  }
-  .logo-facebook {
-    margin: -28px;
-  }
+  .header { text-align: left; }
+  .logo-facebook { margin: -28px; }
 }
 
 @media only screen and (max-width: 900px) {
-  .container-login {
-    padding: 20px 0 50px;
-  }
+  .container-login { padding: 20px 0 50px; }
   .content-login {
     flex-direction: column;
     text-align: center;
-    .header {
-      text-align: center;
-    }
+    .header { text-align: center; }
     .dark-mode {
       display: flex;
       justify-content: center;
@@ -37,11 +29,11 @@
 }
 
 .header h2 {
+  font-size: 28px;
   font-weight: normal;
+  line-height: 32px;
   margin-bottom: 0;
   padding-bottom: 40px;
-  font-size: 28px;
-  line-height: 32px;
   width: 500px;
   @media only screen and (max-width: 1075px) {
     font-size: 24px;
@@ -51,36 +43,33 @@
 }
 
 .header-max-width {
-  max-width: 400px;
   margin: 0 auto;
+  max-width: 400px;
 }
 
 .login {
   align-items: center;
   background-color: var(--main-color-2);
-  border: none;
   border-radius: 8px;
+  border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 20px 20px 28px;
   max-width: 396px;
+  padding: 20px 20px 28px;
   width: 100%;
   @media only screen and (min-width: 900px) {
     margin-top: 50px;
   }
   input {
-    width: 100%;
     box-sizing: border-box;
     margin: 6px 0;
+    width: 100%;
   }
-  .enter,
-  .account {
-    margin: 6px 0 0;
-  }
+  .enter, .account { margin: 6px 0 0; }
   .remember {
-    margin-top: 16px;
     display: inline-block;
+    margin-top: 16px;
   }
   hr {
     margin: 20px 16px;
@@ -96,8 +85,8 @@
 .footer {
   color: var(--main-color-5);
   font-size: 12px;
-  max-width: 980px;
   margin: 0 auto;
+  max-width: 980px;
   @media only screen and (max-width: 1075px) {
     margin: 0 40px;
   }
@@ -112,8 +101,8 @@
   }
   li {
     display: inline-block;
-    padding-right: 10px;
     line-height: 25px;
+    padding-right: 10px;
     &:hover {
       text-decoration: underline;
       cursor: pointer;

@@ -1,61 +1,53 @@
 .post {
   background: var(--main-color-2);
-  border: 1px solid rgba(0,0,0,.2);
   border-radius: max(0px, min(8px, ((100vw - 4px) - 100%) * 9999)) / 8px;
-  padding: 10px 15px;
+  border: 1px solid rgba(0,0,0,.2);
   box-shadow: 0 1px 2px rgba(0,0,0,.2);
-  width: calc(100% - 20px);
-  max-width: 680px;
   box-sizing: border-box;
-  margin: 0 auto;
   margin-bottom: 20px;
-  .header {
-    display: flex;
-  }
+  margin: 0 auto;
+  max-width: 680px;
+  padding: 10px 15px;
+  width: calc(100% - 20px);
+  .header { display: flex; }
   hr { opacity: .5; }
 }
 
 .profile-photo {
   border-radius: 100px;
-  margin-right: 10px;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .post-button {
-  border: 0;
   background: rgba(0,0,0,.1);
   border-radius: 100px;
-  padding: 11px;
-  font-size: 1.0625rem;
+  border: 0;
   color: var(--main-color);
-  width: 100%;
-  text-align: left;
   cursor: pointer;
+  font-size: 1.0625rem;
+  padding: 11px;
+  text-align: left;
+  width: 100%;
 }
 
 .post-actions {
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  li, .item {
-    width: 100%;
-  }
+  li, .item { width: 100%; }
   .item {
+    align-items: center;
+    background: transparent;
+    border-radius: 6px;
+    border: 0;
+    color: var(--main-color);
+    cursor: pointer;
     display: flex;
     justify-content: center;
-    align-items: center;
-    border: 0;
     padding: 6px;
-    cursor: pointer;
-    border-radius: 6px;
-    background: transparent;
-    color: var(--main-color);
-    &:hover {
-      background: rgba(0,0,0,.1);
-    }
-    .icon {
-      margin-right: 10px;
-    }
+    &:hover { background: rgba(0,0,0,.1); }
+    .icon { margin-right: 10px; }
   }
 }

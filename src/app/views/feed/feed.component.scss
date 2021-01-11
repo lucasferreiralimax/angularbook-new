@@ -1,20 +1,18 @@
 .feed {
   display: flex;
-  max-width: 1464px;
   margin: 0 auto;
+  max-width: 1464px;
 }
 
 .aside {
-  max-width: 360px;
   display: block;
+  max-width: 360px;
 }
 
-.complentary {
-  min-width: 360px;
-}
+.complentary { min-width: 360px; }
 
 .main {
+  box-sizing: border-box;
   padding-top: 20px;
   width: 100%;
-  box-sizing: border-box;
 }
