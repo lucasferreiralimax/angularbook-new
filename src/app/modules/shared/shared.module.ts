@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router'
 
 import { DarkmodeComponent } from '@components/darkmode/darkmode.component';
 import { PostComponent } from '@components/post/post.component';
@@ -23,7 +24,8 @@ import { LoadingComponent } from '@components/loading/loading.component';
     LoadingComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class SharedModule { }
