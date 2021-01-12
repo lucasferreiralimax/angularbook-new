@@ -144,6 +144,40 @@ i.icon.active { filter: var(--filter-accent); }
   }
 }
 
+.content-box {
+  background: var(--main-color-2);
+  border-radius: 6px;
+  box-shadow: 0 12px 28px 0 rgba(0,0,0,.2),0 2px 4px 0 rgba(0,0,0,.1),inset 0 0 0 1px rgba(0,0,0,.2);
+  max-width: calc(100vw - 24px);
+  opacity: 0;
+  padding: 5px;
+  pointer-events: none;
+  position: absolute;
+  right: 10px;
+  top: 60px;
+  transition: .3s all;
+  width: 360px;
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  h1 { margin: 0; }
+  hr { opacity: .3; }
+  .list {
+    padding: 5px;
+    p {
+      font-size: .8125rem;
+      font-weight: normal;
+      margin: 0;
+    }
+    .photo {
+      border-radius: 100px;
+      margin-right: 10px;
+    }
+    .item:hover .plus { background: rgba(0,0,0,.15); }
+  }
+}
+
 .icon-content {
   align-items: center;
   border-radius: 100px;
