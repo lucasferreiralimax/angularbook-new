@@ -1,5 +1,5 @@
 <section class="feed-list" *ngIf="!feed">
-  <article class="feed__post">
+  <article class="post">
     <h2>Não há mais publicações</h2>
     <p>Adicione mais amigos para ver mais publicações no seu Feed de Notícias.</p>
     <button class="btn primary" type="button">Encontrar amigos</button>
@@ -7,14 +7,14 @@
 </section>
 
 <section class="feed-list" *ngIf="feed">
-  <article class="feed__post" *ngFor="let post of feed">
-    <div class="feed__container">
-      <img class="feed__photo" [routerLink]="['/perfil', user.username]" [src]="post.photo" [alt]="post.name" width="40" height="40">
-      <div class="feed__header">
+  <article class="feed-post" *ngFor="let post of feed">
+    <div class="feed-container">
+      <div class="feed-header">
+        <img class="feed-photo" [routerLink]="['/perfil', user.username]" [src]="post.photo" [alt]="post.name" width="40" height="40">
         <h1 [routerLink]="['perfil', user.username]">{{ post.name }}</h1>
-        <p class="feed__date" [routerLink]="['/perfil', user.username]">{{ post.data }}</p>
+        <p class="feed-date" [routerLink]="['/perfil', user.username]">{{ post.data }}</p>
       </div>
-      <div class="feed__content" [innerHTML]="post.comment"></div>
+      <div class="feed-content" [innerHTML]="post.comment"></div>
     </div>
   </article>
 </section>
