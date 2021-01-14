@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { DarkmodeService } from '@services/darkmode.service'
+
 @Component({
   selector: 'app-darkmode',
   templateUrl: './darkmode.component.html',
@@ -7,37 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DarkmodeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private darkmodeService: DarkmodeService) { }
 
-  root = (<any>window).document.documentElement;
   dark = false
 
   ngOnInit(): void {
-    console.log(this.root)
+    this.dark = this.darkmodeService.getDarkMode()
   }
 
   darkMode (type: boolean) {
-    console.log("Dark mode")
-    console.log(type)
-    if(!type) {
-      this.root.style.setProperty("--main-color-1", "#fff")
-      this.root.style.setProperty("--main-color-2", "#333")
-      this.root.style.setProperty("--main-color-3", "#333")
-      this.root.style.setProperty("--main-color-4", "#999")
-      this.root.style.setProperty("--main-color-5", "#eee")
-      this.root.querySelector('body').classList.add('dark-mode')
-      this.dark = true
-      // localStorage.setItem("dark", true)
-    } else {
-      this.root.style.setProperty("--main-color-1", "#1c1e21")
-      this.root.style.setProperty("--main-color-2", "#fff")
-      this.root.style.setProperty("--main-color-3", "#f0f2f5")
-      this.root.style.setProperty("--main-color-4", "#dddfe2")
-      this.root.style.setProperty("--main-color-5", "#737373")
-      this.root.querySelector('body').classList.remove('dark-mode')
-      this.dark = false
-      // localStorage.setItem("dark", false)
-    }
+    this.darkmodeService.darkMode(!type)
+    this.dark = this.darkmodeService.getDarkMode()
   }
 
 }
