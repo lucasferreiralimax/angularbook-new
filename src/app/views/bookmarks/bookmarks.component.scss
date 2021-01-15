@@ -1,8 +1,15 @@
 .bookmarks {
-  min-height: calc(100vh - 106px);
+  height: calc(100vh - 65px);
   padding-top: 5px;
   hr {
     margin: 0 .5em;
     opacity: .5;
+  }
+  app-footer {
+    position: absolute;
+    bottom: 0;
+    @media screen and (max-height: 850px) {
+      position: relative;
+    }
   }
 }

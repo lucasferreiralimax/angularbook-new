@@ -6,13 +6,24 @@
 
 .aside {
   display: block;
-  max-width: 360px;
+  min-width: 300px;
+  max-width: 320px;
+  position: fixed;
+  left: 0;
+  overflow-y: auto;
 }
 
-.complentary { min-width: 360px; }
+.complentary {
+  min-width: 320px;
+  position: fixed;
+  right: 0;
+  overflow-y: auto;
+}
 
 .main {
   box-sizing: border-box;
   padding-top: 20px;
   width: 100%;
+  &.true-aside { margin-left: 320px; }
+  &.true-complementary { margin-right: 320px; }
 }

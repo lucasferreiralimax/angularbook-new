@@ -1,6 +1,6 @@
 <section class="feed">
   <app-bookmarks class="aside" *ngIf="asideBookmarks | async"></app-bookmarks>
-  <main class="main">
+  <main class="main" [ngClass]="{ 'true-aside': asideBookmarks | async, 'true-complementary': asideComplentary | async}">
     <app-post></app-post>
     <app-feed-list></app-feed-list>
   </main>
