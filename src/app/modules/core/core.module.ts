@@ -6,6 +6,7 @@ import { HeaderComponent } from '@components/header/header.component';
 import { SearchComponent } from '@components/search/search.component';
 import { AccountsComponent } from '@components/accounts/accounts.component';
 import { CreateComponent } from '@components/create/create.component';
+import { MessengerComponent } from '@components/messenger/messenger.component';
 import { NotificationsComponent } from '@components/notifications/notifications.component';
 import { FooterComponent } from '@components/footer/footer.component';
 
@@ -15,6 +16,7 @@ import { FooterComponent } from '@components/footer/footer.component';
     SearchComponent,
     AccountsComponent,
     CreateComponent,
+    MessengerComponent,
     NotificationsComponent,
     FooterComponent
   ],
@@ -23,6 +25,7 @@ import { FooterComponent } from '@components/footer/footer.component';
     SearchComponent,
     AccountsComponent,
     CreateComponent,
+    MessengerComponent,
     NotificationsComponent,
     FooterComponent
   ],

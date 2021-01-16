@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   desktopSize:Observable<boolean>;
   accounts: boolean = false;
   create: boolean = false;
+  messenger: boolean = false;
   notifications: boolean = false;
 
   constructor(
@@ -30,10 +31,12 @@ export class HeaderComponent implements OnInit {
 
   @ViewChild('accountsRef', {read: ElementRef}) accountsRef: any;
   @ViewChild('createRef', {read: ElementRef}) createRef: any;
+  @ViewChild('messengerRef', {read: ElementRef}) messengerRef: any;
   @ViewChild('notificationsRef', {read: ElementRef}) notificationsRef: any;
 
   @ViewChild('accountsButtonRef', {read: ElementRef}) accountsButtonRef: any;
   @ViewChild('createButtonRef', {read: ElementRef}) createButtonRef: any;
+  @ViewChild('messengerButtonRef', {read: ElementRef}) messengerButtonRef: any;
   @ViewChild('notificationsButtonRef', {read: ElementRef}) notificationsButtonRef: any;
 
   @HostListener('document:click', ['$event'])
@@ -47,6 +50,10 @@ export class HeaderComponent implements OnInit {
         !event.path.includes(this.createRef.nativeElement) &&
         !event.path.includes(this.createButtonRef.nativeElement)
       ) { this.create = false }
+    if (
+        !event.path.includes(this.messengerRef.nativeElement) &&
+        !event.path.includes(this.messengerButtonRef.nativeElement)
+      ) { this.messenger = false }
     if (
         !event.path.includes(this.notificationsRef.nativeElement) &&
         !event.path.includes(this.notificationsButtonRef.nativeElement)
