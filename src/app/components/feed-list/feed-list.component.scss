@@ -53,3 +53,26 @@
   padding-top: 15px;
   text-align: left;
 }
+
+.feed-comment-input {
+  display: flex;
+  margin-top: 10px;
+  img {
+    border-radius: 100px;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+  }
+  input {
+    background: rgba(0,0,0,.1);
+    border-radius: 20px;
+    border: 0;
+    color: var(--main-color);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 9px;
+    text-align: left;
+    width: 100%;
+    outline: none;
+  }
+}

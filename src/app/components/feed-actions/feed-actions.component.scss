@@ -1,0 +1,47 @@
+@keyframes like {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(-10deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.feed-actions {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px 0;
+  border: 0 solid rgba(0,0,0,.2);
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  box-sizing: border-box;
+  .action-like.active {
+    color: rgba(var(--main-color-primary), 1);
+    .icon {
+      animation: 1s like;
+      background-position: 0 -153px;
+      filter: var(--filter-accent);
+    }
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    transition: .3s all;
+    border: 0;
+    background: rgba(0,0,0,0);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    color: var(--main-color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    &:hover { background: rgba(0,0,0,.05); }
+    .icon { margin-right: 10px; }
+  }
+}

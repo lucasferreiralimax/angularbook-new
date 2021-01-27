@@ -127,6 +127,16 @@ i.icon.active { filter: var(--filter-accent); }
 .live { background-position: 0 -25px; }
 .midia { background-position: 0 -325px; }
 
+.comment, .like, .shared {
+  background-image: url("assets/sprite_7.png");
+  height: 18px;
+  width: 18px;
+}
+
+.comment { background-position: 0 -134px; }
+.like { background-position: 0 -172px; }
+.shared { background-position: 0 -191px; }
+
 .list {
   list-style: none;
   margin: 0;

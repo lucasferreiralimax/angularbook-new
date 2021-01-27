@@ -15,6 +15,13 @@
         <p class="feed-date" [routerLink]="['/perfil', user.username]">{{ post.data }}</p>
       </div>
       <div class="feed-content" [innerHTML]="post.comment"></div>
+      <app-feed-actions></app-feed-actions>
+      <div class="feed-comment">
+        <div class="feed-comment-input">
+          <img src="./assets/2L-icon-60.jpg" alt="Lucas">
+          <input type="text" placeholder="Escreva um comentário público…">
+        </div>
+      </div>
     </div>
   </article>
 </section>

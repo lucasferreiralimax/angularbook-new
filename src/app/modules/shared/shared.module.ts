@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router'
 import { DarkmodeComponent } from '@components/darkmode/darkmode.component';
 import { PostComponent } from '@components/post/post.component';
 import { FeedListComponent } from '@components/feed-list/feed-list.component';
+import { FeedActionsComponent } from '@components/feed-actions/feed-actions.component';
 import { ComplementaryComponent } from '@components/complementary/complementary.component';
 import { LoadingComponent } from '@components/loading/loading.component';
 
@@ -13,6 +14,7 @@ import { LoadingComponent } from '@components/loading/loading.component';
     DarkmodeComponent,
     PostComponent,
     FeedListComponent,
+    FeedActionsComponent,
     ComplementaryComponent,
     LoadingComponent
   ],
@@ -20,6 +22,7 @@ import { LoadingComponent } from '@components/loading/loading.component';
     DarkmodeComponent,
     PostComponent,
     FeedListComponent,
+    FeedActionsComponent,
     ComplementaryComponent,
     LoadingComponent
   ],
