@@ -1,17 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-:root {
-  --filter-accent: invert(39%) sepia(57%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(147.75%) hue-rotate(202deg) brightness(97%) contrast(96%);
-  --main-color-1: #1c1e21;
-  --main-color-2: #fff;
-  --main-color-3: #f0f2f5;
-  --main-color-4: #dddfe2;
-  --main-color-5: #737373;
-  --main-color-danger: #ff4a4a;
-  --main-color-primary: 24, 119, 242;
-  --main-color-success: #42b72a;
-}
-
+@import 'css/_variables';
 
 body {
   background: var(--main-color-2);
@@ -20,8 +9,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
-.text-center { text-align: center; }
 
 a {
   text-decoration: none;
@@ -33,24 +20,6 @@ a {
   &.primary { color: rgb(var(--main-color-primary)); }
 }
 
-.btn {
-  background: var(--main-color-1);
-  border-radius: 6px;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  font-size: 20px;
-  line-height: 48px;
-  padding: 0 16px;
-  &[disabled] {
-    cursor: not-allowed;
-    opacity: .6;
-  }
-  &.primary { background: rgb(var(--main-color-primary)); }
-  &.success { background: var(--main-color-success); }
-  &.full { width: 100%; }
-}
-
 input {
   background-color: var(--main-color-2);
   border-radius: 6px;
@@ -60,144 +29,8 @@ input {
   padding: 14px 16px;
 }
 
-.icon {
-  background-repeat: no-repeat;
-  background-size: auto;
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-}
-
-.dark-mode .icon { filter: invert(1) }
-i.icon.active { filter: var(--filter-accent); }
-
-.arrow {
-  background-image: url("assets/sprite_1.png");
-  background-position: 0 -201px;
-}
-
-.arrow-small, .search, .plus, .publish, .close, .back {
-  background-image: url("assets/sprite_2.png");
-}
-.arrow-small { background-position: 0 -276px; }
-.back { background-position: 0 -150px; }
-.plus { background-position: 0 -591px; }
-.publish { background-position: 0 -444px; }
-.search {
-  background-position: 0 -819px;
-  height: 16px;
-  width: 16px;
-}
-.close {
-  background-position: 0 -934px;
-  height: 12px;
-  width: 12px;
-}
-
-.feedback, .help, .logout, .story, .advertising, .marketplace {
-  background-image: url("assets/sprite_3.png");
-}
-.advertising { background-position: 0 -281px; }
-.feedback { background-position: 0 -155px; }
-.help { background-position: 0 -344px; }
-.logout { background-position: 0 -218px; }
-.marketplace { background-position: 0 -428px; }
-.story { background-position: 0 -470px; }
-
-.settings, .room, .group, .event {
-  background-image: url("assets/sprite_4.png");
-}
-.event { background-position: 0 -447px; }
-.group { background-position: 0 -300px; }
-.room { background-position: 0 -321px; }
-.settings { background-position: 0 -930px; }
-
-.preferences, .page {
-  background-image: url("assets/sprite_5.png");
-}
-.page { background-position: 0 -125px; }
-.preferences { background-position: 0 -461px; }
-
-.live, .midia, .happy {
-  background-image: url("assets/sprite_6.png");
-  height: 24px;
-  width: 24px;
-}
-.happy { background-position: 0 -100px; }
-.live { background-position: 0 -25px; }
-.midia { background-position: 0 -325px; }
-
-.comment, .like, .shared {
-  background-image: url("assets/sprite_7.png");
-  height: 18px;
-  width: 18px;
-}
-
-.comment { background-position: 0 -134px; }
-.like { background-position: 0 -172px; }
-.shared { background-position: 0 -191px; }
-
-.list {
-  list-style: none;
-  margin: 0;
-  padding: 1em .5em;
-  .item {
-    align-items: center;
-    border-radius: 6px;
-    cursor: pointer;
-    display: flex;
-    font-size: 15px;
-    font-weight: 600;
-    padding: .5em;
-    transition: .3s background;
-    &:hover { background: rgba(0,0,0,.05); }
-  }
-}
-
-.content-box {
-  background: var(--main-color-2);
-  border-radius: 6px;
-  box-shadow: 0 12px 28px 0 rgba(0,0,0,.2),0 2px 4px 0 rgba(0,0,0,.1),inset 0 0 0 1px rgba(0,0,0,.2);
-  max-width: calc(100vw - 24px);
-  opacity: 0;
-  padding: 5px;
-  pointer-events: none;
-  position: absolute;
-  right: 10px;
-  top: 60px;
-  transition: .3s all;
-  width: 360px;
-  &.active {
-    opacity: 1;
-    pointer-events: all;
-  }
-  h1 { margin: 0; }
-  hr { opacity: .3; }
-  .list {
-    padding: 5px;
-    p {
-      font-size: .8125rem;
-      font-weight: normal;
-      margin: 0;
-    }
-    .photo {
-      border-radius: 100px;
-      margin-right: 10px;
-    }
-    .item:hover .plus { background: rgba(0,0,0,.15); }
-  }
-}
-
-.icon-content {
-  align-items: center;
-  border-radius: 100px;
-  display: flex;
-  height: 40px;
-  justify-content: center;
-  margin-right: .8em;
-  min-width: 40px;
-  transition: .3s all;
-  width: 40px;
-  &.plus { background: rgba(0,0,0,.05); }
-  &.photo img { border-radius: 100px; }
-}
+@import 'css/_helpers';
+@import 'css/_icons';
+@import 'css/_btn';
+@import 'css/_list';
+@import 'css/_content-box';

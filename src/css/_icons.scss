@@ -1,0 +1,94 @@
+.dark-mode .icon { filter: invert(1) }
+i.icon.active { filter: var(--filter-accent); }
+
+.icon {
+  background-repeat: no-repeat;
+  background-size: auto;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  &.arrow {
+    background-image: url("../assets/sprite_1.png");
+    background-position: 0 -201px;
+  }
+  &.arrow-small,
+  &.search,
+  &.plus,
+  &.publish,
+  &.close,
+  &.back {
+    background-image: url("../assets/sprite_2.png");
+  }
+
+  &.arrow-small { background-position: 0 -276px; }
+  &.back { background-position: 0 -150px; }
+  &.plus { background-position: 0 -591px; }
+  &.publish { background-position: 0 -444px; }
+  &.search {
+    background-position: 0 -819px;
+    height: 16px;
+    width: 16px;
+  }
+  &.close {
+    background-position: 0 -934px;
+    height: 12px;
+    width: 12px;
+  }
+
+  &.feedback,
+  &.help,
+  &.logout,
+  &.story,
+  &.advertising,
+  &.marketplace {
+    background-image: url("../assets/sprite_3.png");
+  }
+  &.advertising { background-position: 0 -281px; }
+  &.feedback { background-position: 0 -155px; }
+  &.help { background-position: 0 -344px; }
+  &.logout { background-position: 0 -218px; }
+  &.marketplace { background-position: 0 -428px; }
+  &.story { background-position: 0 -470px; }
+
+
+  &.settings,
+  &.room,
+  &.group,
+  &.event {
+    background-image: url("../assets/sprite_4.png");
+  }
+  &.event { background-position: 0 -447px; }
+  &.group { background-position: 0 -300px; }
+  &.room { background-position: 0 -321px; }
+  &.settings { background-position: 0 -930px; }
+
+  &.preferences,
+  &.page {
+    background-image: url("../assets/sprite_5.png");
+  }
+  &.page { background-position: 0 -125px; }
+  &.preferences { background-position: 0 -461px; }
+
+  &.live,
+  &.midia,
+  &.happy {
+    background-image: url("../assets/sprite_6.png");
+    height: 24px;
+    width: 24px;
+  }
+  &.happy { background-position: 0 -100px; }
+  &.live { background-position: 0 -25px; }
+  &.midia { background-position: 0 -325px; }
+
+  &.comment,
+  &.like,
+  &.shared {
+    background-image: url("../assets/sprite_7.png");
+    height: 18px;
+    width: 18px;
+  }
+
+  &.comment { background-position: 0 -134px; }
+  &.like { background-position: 0 -172px; }
+  &.shared { background-position: 0 -191px; }
+}
