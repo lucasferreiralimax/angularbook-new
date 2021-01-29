@@ -1,0 +1,20 @@
+<button class="feed-options-button" type="button" (click)="toggleOptions()" [class.active]="show">
+  <i class="icon bullets"></i>
+</button>
+<div class="feed-options content-box" [class.active]="show">
+  <ul class="list">
+    <li class="item" [routerLink]="['/edit']">
+      <div class="icon-content plus">
+        <i class="icon edit"></i>
+      </div>
+      Editar publicação
+    </li>
+    <hr>
+    <li class="item" [routerLink]="['/trash']">
+      <div class="icon-content plus">
+        <i class="icon trash"></i>
+      </div>
+      Mover para a Lixeira
+    </li>
+  </ul>
+</div>

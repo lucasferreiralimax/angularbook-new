@@ -13,6 +13,7 @@
         <img class="feed-photo" [routerLink]="['/perfil', user.username]" [src]="post.photo" [alt]="post.name" width="40" height="40">
         <h1 [routerLink]="['perfil', user.username]">{{ post.name }}</h1>
         <p class="feed-date" [routerLink]="['/perfil', user.username]">{{ post.data }}</p>
+        <app-feed-options></app-feed-options>
       </div>
       <div class="feed-content" [innerHTML]="post.comment"></div>
       <app-feed-actions></app-feed-actions>

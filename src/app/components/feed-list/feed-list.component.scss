@@ -37,13 +37,13 @@
     position: absolute;
     top: 0;
     text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: calc(100% - 50px);
     box-sizing: border-box;
-    &:hover {
-      text-decoration: underline;
+    &:hover { text-decoration: underline; }
+    @media screen and (max-width: 450px) {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: calc(100% - 50px);
     }
   }
   .feed-date {
@@ -52,6 +52,7 @@
   }
   h1, .feed-photo, .feed-date {
     cursor: pointer;
+    outline: none;
   }
 }
 

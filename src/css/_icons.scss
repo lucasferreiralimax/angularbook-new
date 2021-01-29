@@ -16,7 +16,8 @@ i.icon.active { filter: var(--filter-accent); }
   &.plus,
   &.publish,
   &.close,
-  &.back {
+  &.back,
+  &.bullets {
     background-image: url("../assets/sprite_2.png");
   }
 
@@ -24,6 +25,7 @@ i.icon.active { filter: var(--filter-accent); }
   &.back { background-position: 0 -150px; }
   &.plus { background-position: 0 -591px; }
   &.publish { background-position: 0 -444px; }
+  &.bullets { background-position: 0 -507px; }
   &.search {
     background-position: 0 -819px;
     height: 16px;
@@ -91,4 +93,14 @@ i.icon.active { filter: var(--filter-accent); }
   &.comment { background-position: 0 -134px; }
   &.like { background-position: 0 -172px; }
   &.shared { background-position: 0 -191px; }
+
+  &.edit,
+  &.trash {
+    background-image: url("../assets/sprite_8.png");
+    height: 20px;
+    width: 20px;
+  }
+
+  &.edit { background-position: 0 -487px; }
+  &.trash { background-position: 0 -592px; }
 }

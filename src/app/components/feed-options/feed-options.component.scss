@@ -1,0 +1,50 @@
+.feed-options-button {
+  align-items: center;
+  background: rgb(var(--main-color-2));
+  border-radius: 100px;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  height: 35px;
+  justify-content: center;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .3s all;
+  width: 35px;
+  &:hover,
+  &.active { background: rgba(0,0,0,.1); }
+}
+
+.feed-options {
+  display: flex;
+  position: absolute;
+  right: -3px;
+  top: 43px;
+  width: auto;
+  z-index: 9;
+  &:after {
+    border-bottom-color: rgb(var(--main-color-2));
+    border: 10px solid transparent;
+    content: '';
+    display: flex;
+    filter: drop-shadow(0 -2px 1px rgba(0,0,0,.15));
+    height: 1px;
+    position: absolute;
+    right: 10px;
+    top: -18px;
+    width: 1px;
+  }
+  .item {
+    padding: 2px 10px 2px 2px;
+    &:hover .plus,
+    .icon-content { background: rgba(0,0,0,0); }
+  }
+  .icon-content {
+    height: 30px;
+    margin-right: 6px;
+    min-width: auto;
+    width: 30px;
+  }
+}
