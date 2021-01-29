@@ -25,8 +25,8 @@
   width: auto;
   z-index: 9;
   &:after {
-    border-bottom-color: rgb(var(--main-color-2));
     border: 10px solid transparent;
+    border-bottom-color: rgb(var(--main-color-2));
     content: '';
     display: flex;
     filter: drop-shadow(0 -2px 1px rgba(0,0,0,.15));
