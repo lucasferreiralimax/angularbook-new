@@ -1,4 +1,4 @@
-.feed-post {
+.feed-post, .post {
   background: rgb(var(--main-color-2));
   border-radius: max(0px, min(8px, ((100vw - 4px) - 100%) * 9999)) / 8px;
   border: 1px solid rgba(0,0,0,.2);
@@ -36,6 +36,12 @@
     margin: 0;
     position: absolute;
     top: 0;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 50px);
+    box-sizing: border-box;
     &:hover {
       text-decoration: underline;
     }
@@ -52,6 +58,7 @@
 .feed-content {
   padding-top: 15px;
   text-align: left;
+  word-break: break-word;
 }
 
 .feed-comment-input {
@@ -74,5 +81,8 @@
     text-align: left;
     width: 100%;
     outline: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

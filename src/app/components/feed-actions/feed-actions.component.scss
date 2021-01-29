@@ -1,13 +1,7 @@
 @keyframes like {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(-10deg) scale(1.2);
-  }
-  100% {
-    transform: rotate(0deg) scale(1);
-  }
+  0%   { transform: rotate(0deg)   scale(1);   }
+  50%  { transform: rotate(-10deg) scale(1.2); }
+  100% { transform: rotate(0deg)   scale(1);   }
 }
 
 .feed-actions {
@@ -48,6 +42,7 @@
     }
     @media screen and (max-width: 350px) {
       font-size: 0;
+      .icon { margin-right: 0; }
     }
   }
 }
