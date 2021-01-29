@@ -3,7 +3,7 @@
 @import 'css/_variables';
 
 body {
-  background: var(--main-color-2);
+  background: rgba(var(--main-color-2), .85);
   color: var(--main-color-1);
   font-family: Arial;
   margin: 0;
@@ -21,7 +21,7 @@ a {
 }
 
 input {
-  background-color: var(--main-color-2);
+  background-color: rgb(var(--main-color-2));
   border-radius: 6px;
   border: 1px solid var(--main-color-4);
   color: var(--main-color-1);

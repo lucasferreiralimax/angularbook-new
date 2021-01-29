@@ -1,5 +1,5 @@
 app-views {
-  background: var(--main-color-3);
+  background: rgba(var(--main-color-3), .8);
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 56px);

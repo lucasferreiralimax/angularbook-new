@@ -1,5 +1,5 @@
 .container-login {
-  background: var(--main-color-3);
+  background: rgba(var(--main-color-3), .8);
   padding: 72px 0 112px;
 }
 
@@ -49,7 +49,7 @@
 
 .login {
   align-items: center;
-  background-color: var(--main-color-2);
+  background-color: rgb(var(--main-color-2));
   border-radius: 8px;
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);

@@ -9,7 +9,7 @@
   top: 0;
   transition: 0s all;
   &.active {
-    background: var(--main-color-2);
+    background: rgb(var(--main-color-2));
     border-radius: 0 0 6px 6px;
     box-shadow: 0 12px 12px rgba(#000, .15), inset 0 0 0 0 rgba(#fff, .7);
     min-height: 90px;
