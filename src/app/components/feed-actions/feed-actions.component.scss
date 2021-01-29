@@ -43,5 +43,11 @@
     outline: none;
     &:hover { background: rgba(0,0,0,.05); }
     .icon { margin-right: 10px; }
+    @media screen and (max-width: 450px) {
+      font-size: 11px;
+    }
+    @media screen and (max-width: 350px) {
+      font-size: 0;
+    }
   }
 }
