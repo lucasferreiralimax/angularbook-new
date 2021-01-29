@@ -1,10 +1,29 @@
 .notfound {
+  background: rgba(var(--main-color-3), .8);
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  img { animation: 1s notfoundMove infinite alternate; }
+  img {
+    animation: 1s notfoundMove infinite alternate;
+    margin: 2em 0;
+    filter: drop-shadow(0 0 5px #fff)
+  }
+  @media screen and (max-width: 450px) {
+    padding: 0 1em;
+    img {
+      width: 82px;
+      height: 65px;
+    }
+  }
+  @media screen and (max-width: 300px) {
+    .btn {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 10px;
+    }
+  }
 }
 
 @keyframes notfoundMove {
