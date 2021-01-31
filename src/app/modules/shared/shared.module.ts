@@ -25,6 +25,7 @@ import { LoadingComponent } from '@components/loading/loading.component';
     PostComponent,
     FeedListComponent,
     FeedActionsComponent,
+    FeedOptionsComponent,
     ComplementaryComponent,
     LoadingComponent
   ],
