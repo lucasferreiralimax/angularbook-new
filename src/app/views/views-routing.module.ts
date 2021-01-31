@@ -15,6 +15,10 @@ const routes: Routes = [
       {
         path: 'bookmarks',
         loadChildren: () => import('./bookmarks/bookmarks.module').then(m => m.BookmarksModule)
+      },
+      {
+        path: 'lucasferreiralimax',
+        loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
       }
     ]
   }

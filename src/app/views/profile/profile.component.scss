@@ -1,0 +1,21 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 40px;
+  max-width: 1464px;
+  align-items: center;
+  .photo {
+    border-radius: 270px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 10px rgba(#000, .2);
+    transition: .5s all;
+    cursor: crosshair;
+    &:hover {
+      box-shadow: 0 0 0 5px rgba(#000, .2), 0 0 5px 15px rgba(#000, .1);
+      filter: hue-rotate(80deg) brightness(1.2) contrast(1.2) saturate(15);
+    }
+  }
+}
+
+.timeline { width: 100%; }
