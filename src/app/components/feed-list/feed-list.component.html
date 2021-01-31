@@ -1,12 +1,4 @@
-<section class="feed-list" *ngIf="!feed">
-  <article class="post">
-    <h2>Não há mais publicações</h2>
-    <p>Adicione mais amigos para ver mais publicações no seu Feed de Notícias.</p>
-    <button class="btn primary" type="button">Encontrar amigos</button>
-  </article>
-</section>
-
-<section class="feed-list" *ngIf="feed">
+<section class="feed-list" *ngIf="feed; else templateEmpty">
   <article class="feed-post" *ngFor="let post of feed">
     <div class="feed-container">
       <div class="feed-header">
@@ -26,3 +18,13 @@
     </div>
   </article>
 </section>
+
+<ng-template #templateEmpty>
+  <section class="feed-list">
+    <article class="post">
+      <h2>Não há mais publicações</h2>
+      <p>Adicione mais amigos para ver mais publicações no seu Feed de Notícias.</p>
+      <button class="btn primary" type="button">Encontrar amigos</button>
+    </article>
+  </section>
+</ng-template>
