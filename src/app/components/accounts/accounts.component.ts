@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { BoundAttribute } from '@angular/compiler/src/render3/r3_ast';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '@services/login.service';
 
@@ -10,6 +11,7 @@ import { LoginService } from '@services/login.service';
 export class AccountsComponent implements OnInit {
 
   @Input() show: boolean = false;
+  @Output() actionAccounts = new EventEmitter();
 
   constructor(
     private loginService: LoginService,

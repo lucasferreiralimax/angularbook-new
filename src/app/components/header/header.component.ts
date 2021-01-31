@@ -63,4 +63,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  visibilityAccounts(event: boolean): void {
+    this.accounts = event
+  }
+
 }

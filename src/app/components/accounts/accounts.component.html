@@ -1,6 +1,6 @@
 <section class="accounts content-box" [class.active]="show">
   <ul class="list">
-    <li class="item" [routerLink]="['/lucasferreiralimax']">
+    <li class="item" [routerLink]="['/lucasferreiralimax']" (click)="actionAccounts.emit(false)">
       <img class="photo" src="./assets/2L-icon-60.jpg" alt="Lucas Ferreira Lima">
       <div>
         <strong>Lucas Ferreira Lima</strong>
