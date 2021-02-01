@@ -1,3 +1,5 @@
+@import '_mixins';
+
 @keyframes like {
   0%   { transform: rotate(0deg)   scale(1);   }
   50%  { transform: rotate(-10deg) scale(1.2); }
@@ -37,10 +39,10 @@
     outline: none;
     &:hover { background: rgba(0,0,0,.05); }
     .icon { margin-right: 10px; }
-    @media screen and (max-width: 450px) {
+    @include break('max-width: 450px') {
       font-size: 11px;
     }
-    @media screen and (max-width: 350px) {
+    @include break('max-width: 450px') {
       font-size: 0;
       .icon { margin-right: 0; }
     }

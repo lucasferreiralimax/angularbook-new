@@ -1,3 +1,5 @@
+@import '_mixins';
+
 .notfound {
   background: rgba(var(--main-color-3), .8);
   align-items: center;
@@ -10,14 +12,14 @@
     margin: 2em 0;
     filter: drop-shadow(0 0 5px #fff)
   }
-  @media screen and (max-width: 450px) {
+  @include break('max-width: 450px') {
     padding: 0 1em;
     img {
       width: 82px;
       height: 65px;
     }
   }
-  @media screen and (max-width: 300px) {
+  @include break('max-width: 300px') {
     .btn {
       font-size: 14px;
       line-height: 20px;

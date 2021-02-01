@@ -1,3 +1,5 @@
+@import '_mixins';
+
 .container-login {
   background: rgba(var(--main-color-3), .8);
   padding: 72px 0 112px;
@@ -15,7 +17,7 @@
   .logo-facebook { margin: -28px; }
 }
 
-@media only screen and (max-width: 900px) {
+@include break('max-width: 900px') {
   .container-login { padding: 20px 0 50px; }
   .content-login {
     flex-direction: column;
@@ -35,7 +37,7 @@
   margin-bottom: 0;
   padding-bottom: 40px;
   width: 500px;
-  @media only screen and (max-width: 1075px) {
+  @include break('max-width: 1075px') {
     font-size: 24px;
     line-height: 28px;
     width: auto;
@@ -58,7 +60,7 @@
   max-width: 396px;
   padding: 20px 20px 28px;
   width: 100%;
-  @media only screen and (min-width: 900px) {
+  @include break('min-width: 900px') {
     margin-top: 50px;
   }
   input {
@@ -95,10 +97,10 @@
   font-size: 12px;
   margin: 0 auto;
   max-width: 980px;
-  @media only screen and (max-width: 1075px) {
+  @include break('max-width: 1075px') {
     margin: 0 40px;
   }
-  @media only screen and (max-width: 500px) {
+  @include break('max-width: 500px') {
     margin: 0 1em;
   }
   margin-top: 10px;

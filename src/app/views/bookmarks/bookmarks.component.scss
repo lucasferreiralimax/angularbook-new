@@ -1,3 +1,5 @@
+@import '_mixins';
+
 .bookmarks {
   height: calc(100vh - 65px);
   padding-top: 5px;
@@ -8,7 +10,7 @@
   app-footer {
     position: absolute;
     bottom: 0;
-    @media screen and (max-height: 850px) {
+    @include break('max-width: 850px') {
       position: relative;
     }
   }
