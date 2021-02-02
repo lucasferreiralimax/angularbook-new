@@ -39,11 +39,12 @@
   }
   &.profile {
     align-items: center;
-    color: rgb(var(--main-color-primary));
+    color: var(--main-color);
     display: flex;
     font-size: 15px;
     font-weight: bold;
     padding-right: 10px;
+    &.active { color: rgb(var(--main-color-primary)); }
     img {
       border-radius: 100px;
       margin-right: 5px;
