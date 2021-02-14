@@ -8,6 +8,7 @@ import { FeedListComponent } from '@components/feed-list/feed-list.component';
 import { FeedActionsComponent } from '@components/feed-actions/feed-actions.component';
 import { FeedOptionsComponent } from '@components/feed-options/feed-options.component';
 import { ComplementaryComponent } from '@components/complementary/complementary.component';
+import { PresentationComponent } from '@components/presentation/presentation.component';
 import { LoadingComponent } from '@components/loading/loading.component';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { LoadingComponent } from '@components/loading/loading.component';
     FeedActionsComponent,
     FeedOptionsComponent,
     ComplementaryComponent,
+    PresentationComponent,
     LoadingComponent
   ],
   exports: [
@@ -27,6 +29,7 @@ import { LoadingComponent } from '@components/loading/loading.component';
     FeedActionsComponent,
     FeedOptionsComponent,
     ComplementaryComponent,
+    PresentationComponent,
     LoadingComponent
   ],
   imports: [
