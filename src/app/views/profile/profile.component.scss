@@ -43,4 +43,26 @@
   }
 }
 
-.timeline { width: 100%; }
+.timeline {
+  width: 100%;
+  max-width: 860px;
+  align-items: top;
+  display: flex;
+  flex-direction: column;
+  @include break('min-width: 880px') {
+    flex-direction: row;
+  }
+  .aside {
+    width: 100%;
+    margin: 0 auto 1em;
+    width: calc(100% - 20px);
+    max-width: 680px;
+    @include break('min-width: 880px') {
+      max-width: 360px;
+      min-width: 360px;
+    }
+  }
+  .content {
+    width: 100%;
+  }
+}
