@@ -103,4 +103,22 @@ i.icon.active { filter: var(--filter-accent); }
 
   &.edit { background-position: 0 -487px; }
   &.trash { background-position: 0 -592px; }
+
+  &.work,
+  &.heart,
+  &.watch,
+  &.github,
+  &.www,
+  &.school {
+    background-image: url("../assets/sprite_9.png");
+    height: 20px;
+    width: 20px;
+  }
+
+  &.work { background-position: 0 0; }
+  &.heart { background-position: 0 -40px; }
+  &.watch { background-position: 0 -60px; }
+  &.github { background-position: 0 -80px; }
+  &.www { background-position: 0 -100px; }
+  &.school { background-position: 0 -20px; }
 }
