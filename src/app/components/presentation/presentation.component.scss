@@ -19,6 +19,10 @@
     height: 35px;
     display: flex;
     align-items: flex-end;
+    .icon {
+      margin-right: 10px;
+      filter: var(--filter-icon);
+    }
   }
   a { color: rgb(var(--main-color-primary)); }
 }
