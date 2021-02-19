@@ -45,8 +45,8 @@
 
 .timeline {
   width: 100%;
-  max-width: 860px;
-  align-items: top;
+  max-width: 892px;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   @include break('min-width: 880px') {
