@@ -1,7 +1,7 @@
 <section class="post">
   <div class="header">
     <img class="profile-photo" src="./assets/2L-icon.jpg" alt="Lucas Ferreira Lima" width="40" height="40" [routerLink]="['/lucasferreiralimax']">
-    <button class="post-button">No que você está pensando, Lucas?</button>
+    <button class="post-button" (click)="handlePostModal(true)">No que você está pensando, Lucas?</button>
   </div>
   <hr>
   <ul class="post-actions">
@@ -25,3 +25,21 @@
     </li>
   </ul>
 </section>
+
+<section class="post-modal" [class.active]="postModal">
+  <h1>Criar publicação</h1>
+  <button type="button" (click)="handlePostModal(false)">Fechar</button>
+  <hr>
+  <div class="header">
+    <img class="profile-photo" src="./assets/2L-icon.jpg" alt="Lucas Ferreira Lima" width="40" height="40" [routerLink]="['/lucasferreiralimax']" (click)="handlePostModal(false)">
+    <p>Lucas Ferreira Lima</p>
+  </div>
+  <div class="content">
+    <textarea name="post-content" id="post-content"></textarea>
+  </div>
+  <div class="footer">
+    <button class="btn primary" (click)="onSubmitPost()">Publicar</button>
+  </div>
+</section>
+
+<div class="overlay-post-modal" [class.active]="postModal" (click)="handlePostModal(false)"></div>

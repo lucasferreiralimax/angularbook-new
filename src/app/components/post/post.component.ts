@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
+
+import { PostService } from '@services/post.service'
 
 @Component({
   selector: 'app-post',
@@ -7,9 +9,57 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  constructor() { }
+  postModal: boolean = false;
+  root = (<any>window).document.body;
+  @Input() user: any;
+  @Output() updateFeed = new EventEmitter<any>();
 
-  ngOnInit(): void {
+  constructor(private postService:PostService) { }
+
+  ngOnInit(): void { }
+
+  getFeed() {
+    this.updateFeed.next();
+  }
+
+  handlePostModal(type: boolean): void {
+    this.postModal = type;
+    if(type) {
+      this.root.querySelector('#post-content').focus()
+      this.root.style.overflow = 'hidden'
+    } else {
+      this.root.removeAttribute('style')
+    }
+  }
+
+  onSubmitPost() {
+    let commentText = this.root.querySelector('#post-content').value;
+
+    if(commentText) {
+      if(this.user) {
+        let { id } = this.user,
+        postData = {
+          iduser: id,
+          data: new Date(),
+          comment: commentText
+        };
+
+        this.postService.setPost(postData).subscribe(
+          res => {
+            this.getFeed();
+            this.root.querySelector('#post-content').value = "";
+            this.handlePostModal(false);
+          },
+          err => {
+            console.log("Error occured");
+            this.postService.setPostMock(commentText)
+            this.root.querySelector('#post-content').value = "";
+            this.getFeed()
+            this.handlePostModal(false);
+          }
+        )
+      }
+    }
   }
 
 }
