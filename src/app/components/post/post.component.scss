@@ -109,33 +109,38 @@
   }
   .close {
     align-items: center;
-    background: rgba(#fff, 0);
+    background: rgba(var(--main-color-2), .1);
     border-radius: 100px;
     border: 0;
     cursor: pointer;
     display: flex;
     filter: invert(1);
+    font-size: 0;
     height: 40px;
     justify-content: center;
     margin-left: 1em;
     min-width: 40px;
-    width: 40px;
-    font-size: 0;
     position: absolute;
-    top: 10px;
     right: 10px;
-    &:hover { background: rgba(#000, .3); }
-    .icon { filter: invert(0); }
+    top: 10px;
+    width: 40px;
+    &:hover { background: rgba(var(--main-color-2), .2); }
+    .icon {
+      filter: invert(1);
+      opacity: .5;
+    }
   }
   hr { opacity: .5; }
   textarea {
+    background: rgba(#fff, 0);
+    border: 0;
+    color: var(--main-color-1);
     font-size: 1.5em;
-    width: 100%;
     max-width: 100%;
     min-width: 100%;
-    border: 0;
-    resize: none;
     outline: none;
+    resize: none;
+    width: 100%;
   }
   .btn {
     width: 100%;
