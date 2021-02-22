@@ -1,8 +1,8 @@
 <section class="feed">
   <app-bookmarks class="aside" *ngIf="asideBookmarks | async"></app-bookmarks>
   <main class="main" [ngClass]="{ 'true-aside': asideBookmarks | async, 'true-complementary': asideComplentary | async}">
-    <app-post></app-post>
-    <app-feed-list></app-feed-list>
+    <app-post [user]="user" (updateFeed)="getFeed()"></app-post>
+    <app-feed-list [user]="user" [feed]="feed"></app-feed-list>
   </main>
   <app-complementary class="complentary" *ngIf="asideComplentary | async"></app-complementary>
 </section>

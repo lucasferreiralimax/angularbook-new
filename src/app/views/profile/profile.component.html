@@ -12,8 +12,8 @@
       <app-footer></app-footer>
     </div>
     <div class="content">
-      <app-post></app-post>
-      <app-feed-list></app-feed-list>
+      <app-post [user]="user" (updateFeed)="getFeed()"></app-post>
+      <app-feed-list [user]="user" [feed]="feed"></app-feed-list>
     </div>
   </div>
 </section>
