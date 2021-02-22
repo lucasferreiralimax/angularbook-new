@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-import { UserService } from '@services/user.service'
-import { PostService } from '@services/post.service'
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-feed-list',
@@ -10,29 +7,12 @@ import { PostService } from '@services/post.service'
 })
 export class FeedListComponent implements OnInit {
 
-  user: any;
-  feed: any;
+  @Input() user: any;
+  @Input() feed: any;
 
-  constructor(private userService: UserService,
-              private postService: PostService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    if(this.userService.getUser()) {
-      this.user = this.userService.getUser()
-    } else {
-      this.user = this.userService.getUserMockado()
-    }
-    this.getFeed()
-  }
-
-  getFeed(): void {
-    this.postService.getListagem().subscribe(
-      res => this.feed = res,
-      error => {
-        console.log(error)
-        this.feed = this.postService.getListagemMock()
-      }
-    );
   }
 
 }
