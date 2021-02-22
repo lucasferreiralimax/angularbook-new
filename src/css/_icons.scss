@@ -16,6 +16,7 @@ i.icon.active { filter: var(--filter-accent); }
   &.plus,
   &.publish,
   &.close,
+  &.close-big,
   &.back,
   &.bullets {
     background-image: url("../assets/sprite_2.png");
@@ -35,6 +36,11 @@ i.icon.active { filter: var(--filter-accent); }
     background-position: 0 -934px;
     height: 12px;
     width: 12px;
+  }
+  &.close-big {
+    background-position: 0 -465px;
+    height: 20px;
+    width: 20px;
   }
 
   &.feedback,

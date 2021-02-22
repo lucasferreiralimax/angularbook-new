@@ -28,14 +28,17 @@
 
 <section class="post-modal" [class.active]="postModal">
   <h1>Criar publicação</h1>
-  <button type="button" (click)="handlePostModal(false)">Fechar</button>
+  <button class="close" type="button" (click)="handlePostModal(false)">
+    Fechar modal
+    <i class="icon close-big"></i>
+  </button>
   <hr>
   <div class="header">
     <img class="profile-photo" src="./assets/2L-icon.jpg" alt="Lucas Ferreira Lima" width="40" height="40" [routerLink]="['/lucasferreiralimax']" (click)="handlePostModal(false)">
     <p>Lucas Ferreira Lima</p>
   </div>
   <div class="content">
-    <textarea name="post-content" id="post-content"></textarea>
+    <textarea name="post-content" id="post-content" placeholder="No que você está pensando?"></textarea>
   </div>
   <div class="footer">
     <button class="btn primary" (click)="onSubmitPost()">Publicar</button>
