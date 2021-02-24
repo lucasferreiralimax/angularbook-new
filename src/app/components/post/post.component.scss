@@ -137,10 +137,12 @@
     color: var(--main-color-1);
     font-size: 1.5em;
     max-width: 100%;
+    max-height: calc(100vh - 300px);
     min-width: 100%;
     outline: none;
     resize: none;
     width: 100%;
+    &::-webkit-scrollbar-track { background: rgba(var(--main-color-3), 0); }
   }
   .btn {
     width: 100%;

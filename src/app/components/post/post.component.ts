@@ -35,8 +35,11 @@ export class PostComponent implements OnInit {
 
   handlePostContent(event: any): void {
     if(event.target.value) {
+      event.target.style.height = "1px";
+      event.target.style.height = (+event.target.scrollHeight)+"px";
       this.postContent = true;
     } else {
+      event.target.removeAttribute('style')
       this.postContent = false;
     }
   }
