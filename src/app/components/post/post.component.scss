@@ -144,6 +144,12 @@
   }
   .btn {
     width: 100%;
+    &.disabled {
+      background: var(--main-color-4);
+      color: var(--main-color-1);
+      opacity: .5;
+      pointer-events: none;
+    }
   }
 }
 

@@ -10,6 +10,7 @@ import { PostService } from '@services/post.service'
 export class PostComponent implements OnInit {
 
   postModal: boolean = false;
+  postContent: boolean = false;
   root = (<any>window).document.body;
   @Input() user: any;
   @Output() updateFeed = new EventEmitter<any>();
@@ -29,6 +30,14 @@ export class PostComponent implements OnInit {
       this.root.style.overflow = 'hidden'
     } else {
       this.root.removeAttribute('style')
+    }
+  }
+
+  handlePostContent(event: any): void {
+    if(event.target.value) {
+      this.postContent = true;
+    } else {
+      this.postContent = false;
     }
   }
 

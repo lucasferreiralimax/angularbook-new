@@ -38,10 +38,10 @@
     <p>Lucas Ferreira Lima</p>
   </div>
   <div class="content">
-    <textarea name="post-content" id="post-content" placeholder="No que você está pensando?"></textarea>
+    <textarea name="post-content" id="post-content" placeholder="No que você está pensando?" (input)="handlePostContent($event)"></textarea>
   </div>
   <div class="footer">
-    <button class="btn primary" (click)="onSubmitPost()">Publicar</button>
+    <button class="btn primary" [class.disabled]="!postContent" (click)="onSubmitPost()">Publicar</button>
   </div>
 </section>
 
