@@ -47,7 +47,11 @@ export class LoginComponent implements OnInit {
       },
       (err: any) => {
         this.loadingLogin = false
-        this.notificationService.notification("error", err.error, err.message)
+        if(err.status == 403) {
+          this.notificationService.notification("error", "Acesso negado", "Tente novamente fazer login")
+        } else {
+          this.notificationService.notification("error", err.error, err.message)
+        }
         console.log("error", err)
       }
     )
