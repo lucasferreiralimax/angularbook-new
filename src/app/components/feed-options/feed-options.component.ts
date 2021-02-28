@@ -1,4 +1,7 @@
-import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
+import { Component, OnInit, ElementRef, HostListener, Input, Output, EventEmitter } from '@angular/core';
+
+import { PostService } from '@services/post.service'
+import { NotificationService } from '@services/notification.service'
 
 @Component({
   selector: 'app-feed-options',
@@ -8,8 +11,14 @@ import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
 export class FeedOptionsComponent implements OnInit {
 
   show: boolean = false;
+  @Input() post: any;
+  @Output() updateFeed = new EventEmitter<any>();
 
-  constructor(private _elementRef : ElementRef) { }
+  constructor(
+    private _elementRef : ElementRef,
+    private postService:PostService,
+    private notificationService: NotificationService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -26,6 +35,24 @@ export class FeedOptionsComponent implements OnInit {
 
   toggleOptions(): void {
     this.show = !this.show;
+  }
+
+  getFeed() {
+    this.updateFeed.next();
+  }
+
+  delete(): void {
+    this.postService.deletePost(this.post).subscribe(
+      (res: any) => {
+        this.notificationService.notification(res.notification.type, res.notification.title, res.notification.content);
+        this.show = false;
+        this.getFeed();
+      },
+      (err: any) => {
+        this.notificationService.notification("error", err.error, err.message);
+        console.log("error", err);
+      }
+    )
   }
 
 }

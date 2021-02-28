@@ -67,6 +67,11 @@ Abraços Fé
     return this.http.post(`${this.apiURL}/insert/user/post`, post_content, httpOptions)
   }
 
+  deletePost(post: any) {
+    const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'}) };
+    return this.http.post(`${this.apiURL}/delete/user/post`, { _id: post._id, iduser: post.iduser }, httpOptions)
+  }
+
   setPostMock(text: string) {
     this.feed.unshift({
       "id_user": "lucas",

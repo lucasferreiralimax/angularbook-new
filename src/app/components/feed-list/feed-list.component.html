@@ -1,11 +1,11 @@
-<section class="feed-list" *ngIf="feed; else templateEmpty">
+<section class="feed-list" *ngIf="feed?.length > 0; else templateEmpty">
   <article class="feed-post" *ngFor="let post of feed">
     <div class="feed-container">
       <div class="feed-header">
         <img class="feed-photo" [routerLink]="['/perfil', user.username]" [src]="post.photo" [alt]="post.name" width="40" height="40">
         <h1 [routerLink]="['perfil', user.username]">{{ post.name }}</h1>
         <p class="feed-date" [routerLink]="['/perfil', user.username]">{{ post.data }}</p>
-        <app-feed-options></app-feed-options>
+        <app-feed-options [post]='post' (updateFeed)="getFeed()"></app-feed-options>
       </div>
       <div class="feed-content" [innerHTML]="post.comment"></div>
       <app-feed-actions></app-feed-actions>
