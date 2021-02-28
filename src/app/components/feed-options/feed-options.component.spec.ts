@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { FeedOptionsComponent } from './feed-options.component';
 
@@ -8,7 +9,8 @@ describe('FeedOptionsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FeedOptionsComponent ]
+      declarations: [ FeedOptionsComponent ],
+      imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
   });
