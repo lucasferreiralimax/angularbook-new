@@ -6,7 +6,7 @@
   flex-direction: column;
   height: 60px;
   left: 0;
-  padding: 6px 16px 0;
+  padding: 6px 16px 0 0;
   position: fixed;
   top: 0;
   transition: 0s all;
@@ -55,7 +55,7 @@
   position: absolute;
   width: 0;
   &.show {
-    left: -140px;
+    left: -130px;
     opacity: 1;
     pointer-events: all;
     position: relative;
