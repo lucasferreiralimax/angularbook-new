@@ -13,6 +13,8 @@ export class LoginComponent implements OnInit {
 
   loginForm
   loadingLogin = false
+  accountModal: boolean = false;
+  root = (<any>window).document.body;
 
   constructor(
     private loginService: LoginService,
@@ -30,6 +32,16 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  handleAccountModal(type: boolean): void {
+    this.accountModal = type;
+    if(type) {
+      // this.root.querySelector('#post-content').focus()
+      this.root.style.overflow = 'hidden'
+    } else {
+      this.root.removeAttribute('style')
+    }
   }
 
   onSubmitLogin(formData: any) {

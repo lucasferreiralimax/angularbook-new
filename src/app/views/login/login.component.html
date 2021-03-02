@@ -19,12 +19,31 @@
         </button>
         <a href="#" class="remember primary">Esqueceu a senha?</a>
         <hr>
-        <button class="btn success account" type="button">Criar nova conta</button>
+        <button class="btn success account" type="button"  (click)="handleAccountModal(true)">Criar nova conta</button>
       </form>
       <p class="create-page"><a href="#" class="default">Criar uma Página</a> para uma celebridade, banda ou empresa.</p>
     </main>
   </div>
 </div>
+
+<section class="account-modal" [class.active]="accountModal">
+  <div class="header">
+    <h1>Cadastre-se</h1>
+    <p>É rápido e fácil.</p>
+    <hr>
+    <button class="close" type="button" (click)="handleAccountModal(false)">
+      Fechar modal
+      <i class="icon close-big"></i>
+    </button>
+  </div>
+  <div class="footer">
+    <small>Ao clicar em Cadastre-se, você concorda com nossos Termos, Política de Dados e Política de Cookies. Você poderá receber notificações por SMS e cancelar isso quando quiser.</small>
+    <button class="btn primary" [class.disabled]="!false">Cadastre-se</button>
+  </div>
+</section>
+
+<div class="overlay-account-modal" [class.active]="accountModal" (click)="handleAccountModal(false)"></div>
+
 <footer class="footer">
   <ul>
     <li>Português (Brasil)</li>
