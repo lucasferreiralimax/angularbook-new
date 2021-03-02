@@ -3,6 +3,7 @@
 .container-login {
   background: rgba(var(--main-color-3), .8);
   padding: 72px 0 112px;
+  min-height: 535px;
 }
 
 .content-login {
@@ -97,13 +98,17 @@
   font-size: 12px;
   margin: 0 auto;
   max-width: 980px;
-  @include break('max-width: 1075px') {
-    margin: 0 40px;
+  @include break('max-width: 1024px') {
+    margin: 30px 1em;
+    padding: 0 1em;
   }
-  @include break('max-width: 500px') {
-    margin: 0 1em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  a {
+    color: var(--main-color-success);
+    font-weight: bold;
   }
-  margin-top: 10px;
+  hr { opacity: .4; }
   ul {
     align-items: center;
     display: flex;
