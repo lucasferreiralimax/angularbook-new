@@ -36,9 +36,39 @@
       <i class="icon close-big"></i>
     </button>
   </div>
+  <form id="registerForm" [formGroup]="registerForm" (ngSubmit)="onSubmitCadastro(registerForm.value)">
+    <div class="name">
+      <input id="name" placeholder="Nome" type="text" formControlName="name" appTrim required>
+      <input id="lastname" placeholder="Sobrenome" type="text" formControlName="lastname" appTrim required>
+    </div>
+    <input id="email_register" placeholder="E-mail" type="email" formControlName="email_register" appTrim required>
+    <input id="password_register" placeholder="Senha" type="password" formControlName="password_register" required>
+    <label for="birthday">
+      <p>Data de nascimento:</p>
+    </label>
+    <input id="birthday" type="date" formControlName="birthday" required>
+    <p>Gênero</p>
+    <div class="gender">
+      <label for="gender_woman">
+        <input id="gender_woman" name="gender" type="radio" formControlName="gender" value="woman" required>
+        <span>Feminino</span>
+      </label>
+      <label for="gender_man">
+        <input id="gender_man" name="gender" type="radio" formControlName="gender" value="man" required>
+        <span>Masculino</span>
+      </label>
+      <label for="gender_others">
+        <input id="gender_others" name="gender" type="radio" formControlName="gender" value="others" required>
+        <span>Personalizado</span>
+      </label>
+    </div>
+  </form>
   <div class="footer">
     <small>Ao clicar em Cadastre-se, você concorda com nossos Termos, Política de Dados e Política de Cookies. Você poderá receber notificações por SMS e cancelar isso quando quiser.</small>
-    <button class="btn primary" [class.disabled]="!false">Cadastre-se</button>
+    <button form="registerForm" class="btn primary" [class.disabled]="!registerForm.valid">
+      <span *ngIf="!loadingCadastro">Cadastre-se</span>
+      <app-loading *ngIf="loadingCadastro"></app-loading>
+    </button>
   </div>
 </section>
 

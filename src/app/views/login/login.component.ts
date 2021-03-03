@@ -11,8 +11,10 @@ import { NotificationService } from '@services/notification.service'
 })
 export class LoginComponent implements OnInit {
 
-  loginForm
-  loadingLogin = false
+  loginForm;
+  registerForm;
+  loadingLogin = false;
+  loadingCadastro = false;
   accountModal: boolean = false;
   root = (<any>window).document.body;
 
@@ -28,6 +30,17 @@ export class LoginComponent implements OnInit {
         Validators.email
       ]],
       password: ['lucas', Validators.required]
+    })
+    this.registerForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      lastname: ['', Validators.required],
+      email_register: ['', [
+        Validators.required,
+        Validators.email
+      ]],
+      password_register: ['', Validators.required],
+      birthday: ['', Validators.required],
+      gender: ['', Validators.required]
     })
   }
 
@@ -65,6 +78,45 @@ export class LoginComponent implements OnInit {
           this.notificationService.notification("error", err.error, err.message)
         }
         console.log("error", err)
+      }
+    )
+  }
+
+  onSubmitCadastro(formData: any) {
+    this.loadingCadastro = true
+    formData.since = new Date()
+    formData.background = "assets/cover.jpg"
+
+    switch(formData.gender) {
+      case 'woman':
+        formData.photo = "assets/user_woman.jpg"
+        break;
+      case 'man':
+        formData.photo = "assets/user_man.jpg"
+        break;
+      case 'others':
+        formData.photo = "assets/user_other.jpg"
+        break;
+    }
+
+    this.loginService.registerUser(formData).subscribe(
+      (res: any) => {
+        this.loadingCadastro = false
+        this.notificationService.notification(res.notification.type, res.notification.title, res.notification.content)
+        if(res.notification.content == "Usuário já cadastrado.") {
+          this.registerForm.controls['email_register'].reset()
+          this.registerForm.controls['password_register'].reset()
+          this.handleAccountModal(false)
+        } else {
+          this.registerForm.reset()
+          this.handleAccountModal(false)
+        }
+      },
+      (err: any) => {
+        this.loadingCadastro = false
+        this.handleAccountModal(false)
+        this.notificationService.notification("error", "Erro", "Aconteceu algum erro na base de dados tente novamente mais tarde")
+        console.log(err)
       }
     )
   }

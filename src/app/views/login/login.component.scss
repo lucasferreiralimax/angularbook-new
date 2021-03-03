@@ -205,6 +205,49 @@
   .footer { margin: 0; }
 }
 
+.account-modal form {
+  label, button {
+    display: block;
+  }
+  input {
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccd0d5;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin: 0;
+    padding: 8px 10px;
+    &.ng-invalid.ng-touched {
+      border: 1px solid red;
+    }
+  }
+  input:not([type="radio"]) {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .name input:first-of-type {
+    margin-right: 5px;
+  }
+  .name input:last-of-type {
+    margin-left: 5px;
+  }
+  .name, .gender {
+    box-sizing: border-box;
+    display: inline-flex;
+    width: 100%;
+    label {
+      padding: 5px;
+      span {
+        color: #1d2129;
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 18px;
+        padding: 0 10px 0 3px;
+      }
+    }
+  }
+}
+
 .overlay-account-modal {
   background: rgba(var(--main-color-2), .8);
   bottom: 0;
