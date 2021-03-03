@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   loginForm;
   registerForm;
   loadingLogin = false;
-  loadingCadastro = false;
+  loadingRegister = false;
   accountModal: boolean = false;
   root = (<any>window).document.body;
 
@@ -82,8 +82,8 @@ export class LoginComponent implements OnInit {
     )
   }
 
-  onSubmitCadastro(formData: any) {
-    this.loadingCadastro = true
+  onSubmitRegister(formData: any) {
+    this.loadingRegister = true
     formData.since = new Date()
     formData.background = "assets/cover.jpg"
 
@@ -101,7 +101,7 @@ export class LoginComponent implements OnInit {
 
     this.loginService.registerUser(formData).subscribe(
       (res: any) => {
-        this.loadingCadastro = false
+        this.loadingRegister = false
         this.notificationService.notification(res.notification.type, res.notification.title, res.notification.content)
         if(res.notification.content == "Usuário já cadastrado.") {
           this.registerForm.controls['email_register'].reset()
@@ -113,7 +113,7 @@ export class LoginComponent implements OnInit {
         }
       },
       (err: any) => {
-        this.loadingCadastro = false
+        this.loadingRegister = false
         this.handleAccountModal(false)
         this.notificationService.notification("error", "Erro", "Aconteceu algum erro na base de dados tente novamente mais tarde")
         console.log(err)

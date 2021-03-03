@@ -36,7 +36,7 @@
       <i class="icon close-big"></i>
     </button>
   </div>
-  <form id="registerForm" [formGroup]="registerForm" (ngSubmit)="onSubmitCadastro(registerForm.value)">
+  <form id="registerForm" [formGroup]="registerForm" (ngSubmit)="onSubmitRegister(registerForm.value)">
     <div class="name">
       <input id="name" placeholder="Nome" type="text" formControlName="name" appTrim required>
       <input id="lastname" placeholder="Sobrenome" type="text" formControlName="lastname" appTrim required>
@@ -66,8 +66,8 @@
   <div class="footer">
     <small>Ao clicar em Cadastre-se, você concorda com nossos Termos, Política de Dados e Política de Cookies. Você poderá receber notificações por SMS e cancelar isso quando quiser.</small>
     <button form="registerForm" class="btn primary" [class.disabled]="!registerForm.valid">
-      <span *ngIf="!loadingCadastro">Cadastre-se</span>
-      <app-loading *ngIf="loadingCadastro"></app-loading>
+      <span *ngIf="!loadingRegister">Cadastre-se</span>
+      <app-loading *ngIf="loadingRegister"></app-loading>
     </button>
   </div>
 </section>
