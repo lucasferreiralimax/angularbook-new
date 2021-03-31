@@ -1,6 +1,7 @@
-# AngularbookNew
+# Angularbook New
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+## Screenshot
+![Angularbook Screenshot](https://raw.githubusercontent.com/lucasferreiralimax/angularbook-new/master/src/assets/angularbook-screen.png)
 
 ## Development server
 
