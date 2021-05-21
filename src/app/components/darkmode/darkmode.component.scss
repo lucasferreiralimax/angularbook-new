@@ -2,6 +2,21 @@
   align-items: center;
   display: flex;
   cursor: pointer;
+  outline: none;
+  &:focus {
+    svg {
+      filter: drop-shadow(0 0 5px rgb(var(--main-color-primary)));
+      &.active {
+        filter: drop-shadow(0 0 5px #fff);
+      }
+    }
+    .dark-mode-button {
+      box-shadow: 0 0 5px rgb(var(--main-color-primary));
+      &.active {
+        box-shadow: 0 0 5px #fff;
+      }
+    }
+  }
   p { margin-right: 1em; }
 }
 
