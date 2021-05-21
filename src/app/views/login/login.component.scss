@@ -15,7 +15,10 @@
   max-width: 980px;
   padding: 0 1em;
   .header { text-align: left; }
-  .logo-facebook { margin: -28px; }
+  .logo-facebook {
+    margin: -28px;
+    pointer-events: none;
+  }
 }
 
 @include break('max-width: 900px') {
