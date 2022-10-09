@@ -32,12 +32,6 @@ module.exports = function (config) {
         { type: 'text-summary' }
       ]
     },
-    customLaunchers: {
-      ChromeHeadlessCustom: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox', '--disable-gpu']
-      }
-    },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,

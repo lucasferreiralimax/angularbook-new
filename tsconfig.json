@@ -2,17 +2,19 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "src",
-    "paths": {
-      "@services/*": ["app/services/*"],
-      "@components/*": ["app/components/*"],
-      "@modules/*": ["app/modules/*"],
-      "@directives/*": ["app/directives/*"],
-      "@auth/*": ["app/auth/*"]
-    },
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "paths": {
+      "@services/*": ["src/app/services/*"],
+      "@components/*": ["src/app/components/*"],
+      "@modules/*": ["src/app/modules/*"],
+      "@directives/*": ["src/app/directives/*"],
+      "@auth/*": ["src/app/auth/*"]
+    },
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -21,14 +23,15 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
+    "target": "es2020",
     "module": "es2020",
     "lib": [
-      "es2018",
+      "es2020",
       "dom"
     ]
   },
   "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
