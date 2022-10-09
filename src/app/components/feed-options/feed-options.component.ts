@@ -38,7 +38,7 @@ export class FeedOptionsComponent implements OnInit {
   }
 
   getFeed() {
-    this.updateFeed.next();
+    this.updateFeed.next(true);
   }
 
   delete(): void {

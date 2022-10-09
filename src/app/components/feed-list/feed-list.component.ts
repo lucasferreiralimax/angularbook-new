@@ -17,6 +17,6 @@ export class FeedListComponent implements OnInit {
   }
 
   getFeed() {
-    this.updateFeed.next();
+    this.updateFeed.next(true);
   }
 }

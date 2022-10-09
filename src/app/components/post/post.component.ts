@@ -20,7 +20,7 @@ export class PostComponent implements OnInit {
   ngOnInit(): void { }
 
   getFeed() {
-    this.updateFeed.next();
+    this.updateFeed.next(true);
   }
 
   handlePostModal(type: boolean): void {
